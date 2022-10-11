@@ -75,13 +75,13 @@ nerd-fonts-complete waybar wofi polkit-gnome sway-im wl-clipboard swayidle swayl
 zsh-theme-powerlevel10k zsh-syntax-highlighting zsh-autosuggestions
 ```
 配置：
-```
+```bash
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```
 在其他发行版上可直接从 github 上下载对应的插件：
-```
+```bash
 mkdir -p ~/.zsh/plugins
 cd ~/.zsh/plugins
 git clone https://github.com/romkatv/powerlevel10k.git
@@ -101,6 +101,10 @@ source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 * exa 替代 ls 和 tree
 * bottom 替代 top
 * bat 替代 cat
+
+关于`~/.zprofile`：
+
+仅仅是设置登录`tty1`自动启动`sway`桌面，关于如何开机自动，请参考[这里](https://groveer.github.io/book/linux/auto-login.html)
 
 #### wezterm
 
