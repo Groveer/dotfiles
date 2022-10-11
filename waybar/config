@@ -1,0 +1,100 @@
+{
+    "position": "top",
+    "modules-left": ["cpu","custom/gpu-usage","memory","temperature"],
+    "modules-center": ["sway/workspaces"],
+    "modules-right": ["tray","pulseaudio","network","battery","clock"],
+    "sway/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "enable-bar-scroll": true,
+        "format": "{index} {icon}",
+        "persistent_workspaces": {
+            /* "7": [],
+            "10": " ",*/
+        },
+        "format-icons": {
+            "1": " ",
+            "2": " ",
+            "3": " ",
+            "4": " ",
+            "5": " ",
+            "6": " ",
+            "7": " ",
+            "8": " ",
+            "9": " ",
+            "10": " ",
+        },
+    },
+    "clock": {
+        "format": "  {:%a %m-%d %T}",
+        "format-alt": "{:%Y-%m-%d}",
+        "tooltip": false,
+        "interval": 1,
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "tooltip": false,
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-full": "  {capacity}%",
+        "format-icons": [" ", " ", " "],
+    },
+    "network": {
+        "format-wifi": "  {essid} ",
+        "tooltip": false,
+        "format-ethernet": "  {ipaddr}/{cidr}",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected",
+        "format-disabled": "Disabled",
+        "on-click": "nm-connection-editor",
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "tooltip": false,
+        "format-muted": "婢 Muted" ,
+        "format-bluetooth": " {volume}%",
+        "format-icons": {
+            "headphone": "",
+            "default": ["", "", ""],
+        },
+        "on-click": "pavucontrol"
+    },
+    "temperature": {
+        "thermal-zone": 1,
+        "critical-threshold": 75,
+        "format-critical": " !{temperatureC}°C",
+        "format": " {temperatureC}°C"
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "cpu": {
+        "interval": 1,
+        "format": "  {usage}%",
+    },
+    "custom/gpu-usage": {
+        "exec": "cat /sys/class/hwmon/hwmon8/device/gpu_busy_percent",
+        "format": "  {}%",
+        "return-type": "",
+        "interval": 5,
+    },
+    "memory": {
+        "interval": 10,
+        "format": "  {}%",
+        "max-length": 8,
+    },
+    "bluetooth": {
+        "format": "{icon}",
+        "format-connected": "  {device_alias}",
+        "tooltip": false,
+        "tooltip-format": "{status}",
+        "format-on": "",
+        "format-off": "",
+    }
+}
