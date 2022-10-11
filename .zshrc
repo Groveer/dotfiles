@@ -71,21 +71,16 @@ fi
 
 source ~/.zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/plugins/fast-syntax-highlighting/F-Sy-H.plugin.zsh
+source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias vim=nvim
-alias ls=exa
-alias l="exa -al"
-alias ll="exa -l"
-alias tree="exa -T"
+alias ls="exa --icons"
+alias l="exa -al --icons"
+alias ll="exa -l --icons"
+alias tree="exa -T --icons"
 alias cat="bat"
-alias top="btm"
-
-# go env
-export GOROOT=/usr/lib/go
-export GOPATH=~/Develop/go		   # 这两行你需要
-export GOBIN=~/Develop/go/bin		# 修改为自己的
-export PATH=$PATH:$GOROOT/bin:$GOBIN
+alias top="btm --basic --group --process_command --network_use_bytes --regex"
+alias cp="rsync -a"
 
 export PATH=$PATH:~/.local/bin
 export EDITOR=nvim
