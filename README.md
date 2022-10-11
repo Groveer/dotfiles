@@ -97,9 +97,10 @@ source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```
 
 另外，还设置一些 alias，替代了一些工具：
-    * exa 替代 ls 和 tree
-    * bottom 替代 top
-    * bat 替代 cat
+
+* exa 替代 ls 和 tree
+* bottom 替代 top
+* bat 替代 cat
 
 #### wezterm
 
