@@ -101,6 +101,7 @@ source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 * exa 替代 ls 和 tree
 * bottom 替代 top
 * bat 替代 cat
+* rsync 替代 cp
 
 关于`~/.zprofile`：
 
