@@ -15,26 +15,11 @@ autocmd("BufEnter", {
   end,
 })
 
--- autocmd({ "BufNewFile", "BufWritePre", "BufRead" }, {
---   pattern = "*",
---   group = myAutoGroup,
---   callback = function()
---     require("basic.files").Settab()
---   end
--- })
-
 -- 进入Terminal 自动进入插入模式
 autocmd("TermOpen", {
   group = myAutoGroup,
   command = "startinsert",
 })
-
--- 保存时自动格式化
--- autocmd("BufWritePre", {
---     group = myAutoGroup,
---     pattern = { "*.lua", "*.py", "*.sh" },
---     callback = vim.lsp.buf.formatting_sync,
--- })
 
 -- 修改lua/plugins.lua 自动更新插件
 autocmd("BufWritePost", {
