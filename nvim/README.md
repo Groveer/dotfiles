@@ -64,6 +64,7 @@
 | 通用       | qq         | normal 模式，退出                                                   |
 | todo       | ]t         | normal 模式，下一个注释标签                                         |
 | todo       | [t         | normal 模式，上一个注释标签                                         |
+| todo       | lt         | normal 模式, 在telescope中列出标签                                  |
 | 缩进       | <          | visual 模式，左缩进                                                 |
 | 缩进       | >          | visual 模式，右缩进                                                 |
 | 移动       | Ctrl+Up    | visual 模式， 向上移动选中文本                                      |
