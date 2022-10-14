@@ -31,6 +31,8 @@ vim.keymap.set("n", "[t", function()
   require("todo-comments").jump_prev()
 end, { desc = "Previous todo comment" })
 
+map("n", "tl", ":TodoTelescope<CR>", opt)
+
 -- You can also specify a list of valid jump keywords
 
 -- vim.keymap.set("n", "]t", function()

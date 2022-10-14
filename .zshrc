@@ -79,7 +79,7 @@ alias l="exa -al --icons"
 alias ll="exa -l --icons"
 alias tree="exa -T --icons"
 alias cat="bat"
-alias top="btm --basic --group --process_command --network_use_bytes --regex"
+alias top="btm --basic --group --process_command --network_use_bytes --regex --tree"
 alias cp="rsync -a"
 
 export PATH=$PATH:~/.local/bin
