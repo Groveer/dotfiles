@@ -38,8 +38,9 @@ packer.startup({
     -------------------------- plugins -------------------------------------------
     -- nvim-tree
     use({
-      "kyazdani42/nvim-tree.lua",
-      requires = "kyazdani42/nvim-web-devicons",
+      "nvim-tree/nvim-tree.lua",
+      requires = "nvim-tree/nvim-web-devicons",
+      tag = 'nightly' -- optional, updated every week. (see issue #1193)
     })
     -- bufferline
     use({
@@ -96,7 +97,7 @@ packer.startup({
     -- use("mhartington/formatter.nvim")
     -- use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
     -- Lua 增强
-    use("folke/lua-dev.nvim")
+    use("folke/neodev.nvim")
     -- JSON 增强
     use("b0o/schemastore.nvim")
     --------------------- colorschemes --------------------
@@ -125,7 +126,7 @@ packer.startup({
     -- git
     use({ "lewis6991/gitsigns.nvim" })
     ----------------------------------------------
-    use("j-hui/fidget.nvim")
+    -- use("j-hui/fidget.nvim")
     use({'jdhao/whitespace.nvim', event = 'VimEnter'})
     -- plantuml
     use({'tyru/open-browser.vim', ft = {'plantuml'}, event = 'BufEnter'})
