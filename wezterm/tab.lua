@@ -4,7 +4,7 @@ local tab_bar_style = {
   active_tab_left = wezterm.format {
     { Background = { Color = '#66CCFF' } },
     { Foreground = { Color = '#2b2042' } },
-    { Text = ' ' },
+    { Text = '<' },
   },
   active_tab_right = wezterm.format {
     { Background = { Color = '#0b0022' } },

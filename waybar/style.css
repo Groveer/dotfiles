@@ -3,7 +3,7 @@
 }
 
 window#waybar {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.8);
     color: white;
     opacity: 1;
 }
@@ -36,8 +36,7 @@ window#waybar {
 
 
 #clock, #tray, #battery, #pulseaudio, #network, #temperature,#cpu,#memory, #bluetooth{
-	background-color: #4c566a;
-	background-color: #373737;
+    background: rgba(0, 0, 0, 0.3);
     padding: 0 5px;
 }
 
