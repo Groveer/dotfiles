@@ -62,8 +62,15 @@ return {
       "FiraCode Nerd Font",
       "Noto Sans CJK SC"
     }),
+    font_size = 9,
+    -- -- The overall background color of the tab bar when
+    -- -- the window is focused
+    -- active_titlebar_bg = 'rgba(100% 100% 100% 50%)',
+    -- -- The overall background color of the tab bar when
+    -- -- the window is not focused
+    -- inactive_titlebar_bg = 'rgba(0% 0% 0% 30%)',
   },
-  window_background_opacity = 0.7,
+  window_background_opacity = 0.3,
   initial_rows = 30,
   initial_cols = 100,
 }
