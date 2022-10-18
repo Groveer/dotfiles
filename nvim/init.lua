@@ -4,8 +4,6 @@ require("basic")
 require("keybindings")
 -- Packer插件管理
 require("plugins")
--- 主题设置
-require("colorscheme")
 -- 自动命令
 require("autocmds")
 -- 插件配置
@@ -22,8 +20,11 @@ require("plugin-config.comment")
 require("plugin-config.nvim-autopairs")
 -- require("plugin-config.fidget")
 require("plugin-config.gitsigns")
+require("plugin-config.tokyonight")
 require("plugin-config.todo-comments")
 require("plugin-config.nvim-notify")
+-- 主题设置 主题设置要在主题插件配置之后进行配置，否则不生效
+require("colorscheme")
 -- 内置LSP
 require("lsp.setup")
 require("lsp.cmp")

@@ -34,16 +34,16 @@ lualine.setup({
       "filesize",
       {
         "fileformat",
-        -- symbols = {
-        --   unix = '', -- e712
-        --   dos = '', -- e70f
-        --   mac = '', -- e711
-        -- },
         symbols = {
-          unix = "LF",
-          dos = "CRLF",
-          mac = "CR",
+          unix = '', -- e712
+          dos = '', -- e70f
+          mac = '', -- e711
         },
+        -- symbols = {
+        --   unix = "LF",
+        --   dos = "CRLF",
+        --   mac = "CR",
+        -- },
       },
       "encoding",
       "filetype",

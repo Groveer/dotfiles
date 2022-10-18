@@ -1,5 +1,5 @@
 local wezterm = require 'wezterm';
-local keys = require 'keys';
+-- local keys = require 'keys';
 -- local colors = require 'colors';
 local tab_bar_style = require 'tab';
 
@@ -45,8 +45,8 @@ return {
     "Noto Sans CJK SC"
   }),
   font_size = 14,
-  leader = keys.leader,
-  keys = keys.keys,
+  -- leader = keys.leader,
+  -- keys = keys.keys,
   tab_bar_at_top = true,
   tab_bar_style = tab_bar_style,
   enable_scroll_bar = false,
