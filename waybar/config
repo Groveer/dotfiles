@@ -2,7 +2,7 @@
     "position": "top",
     "modules-left": ["cpu","custom/gpu-usage","memory","temperature"],
     "modules-center": ["sway/workspaces"],
-    "modules-right": ["tray","pulseaudio","network","battery","clock"],
+    "modules-right": ["tray","pulseaudio","bluetooth","network","battery","clock"],
     "sway/workspaces": {
         "disable-scroll": false,
         "all-outputs": true,
