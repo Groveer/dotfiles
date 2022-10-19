@@ -120,3 +120,11 @@ source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ### 编辑器/IDE（neoview）
 
 Neovim 既是编辑器又是 IDE，具体配置可参考[这里](nvim/README.md)
+
+### 管理dotfiles
+
+1. 本人使用`stow`来管理 dotfiles，好处是配置文件全部集中在本项目中，只需修改本项目内容即可方便快速的部署 dotfiles 并使其生效，其原理就是在对应的目录中创建软链。
+2. 以`zsh`为例，首先删除用户目录中原来的`.zprofile`和`.zshrc`文件，然后执行：`stow zsh -t ~`。
+3. 以`nvim`为例，首先删除用户目录中原来的配置：`rm -rf ~/.config/nvim/*`，记住不要删除文件夹，没有文件夹也需要先创建，然后执行：`stow nvim -t ~/.config/nvim`。
+4. 因为是软链，如果新增或删除文件，都需要重新软链，但是修改不需要，删除：`stow -D nvim -t ~/.config/nvim`，重新软链：`stow nvim -t ~/.config/nvim`。
+5. 若是有兴趣的同学也可以写成脚本更方便的进行更新管理。
