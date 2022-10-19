@@ -44,6 +44,7 @@ nerd-fonts-complete waybar wofi polkit-gnome sway-im wl-clipboard swayidle swayl
 5. 使用`grim`+`slurp`来实现方便快速的截图功能。
 6. 使用`wl-clipboard`来实现方便的复制功能。
 7. 快捷键的配置请参考[配置文件](sway/config)。
+8. `sway`完全配置参考[官方文档](https://github.com/swaywm/sway/wiki)。
 
 #### waybar
 
@@ -59,6 +60,7 @@ nerd-fonts-complete waybar wofi polkit-gnome sway-im wl-clipboard swayidle swayl
 7. network
 8. battery
 9. clock
+10. `waybar`完全配置参考[官方文档](https://github.com/Alexays/Waybar/wiki/Configuration)。
 
 #### wofi
 
