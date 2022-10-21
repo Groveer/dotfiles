@@ -4,4 +4,8 @@ if not status then
   return
 end
 
-vim.notify = require("notify")
+project.setup({
+  background_colour = "#000000",
+})
+
+vim.notify = project
