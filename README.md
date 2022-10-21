@@ -111,11 +111,11 @@ source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #### wezterm
 
-`wezterm`的配置文件在`~/.config/wezterm/wezterm.lua`，但本人并未进行任何配置，默认配置足以。
+`wezterm`的配置文件在`~/.config/wezterm/wezterm.lua`，配置文件可用`stow`进行软链，这里对wezterm进行了简单的配置，主要是透明背景。
 
 ### 浏览器（firefox）
 
-使用火狐浏览器的好处是个人配置与历史记录完美同步，关于配置，每个人都不一样，这里不再过多介绍。
+使用火狐浏览器的好处是个人配置与历史记录完美同步，关于配置，每个人都不一样，这里不再过多介绍。需要注意的是，火狐浏览器虽然原生支持wayland，但默认并未使用wayland原生，需要修改环境变量以启用，关于wayland环境配置，可参考[这里](https://groveer.github.io/book/archlinux/config.html#%E9%85%8D%E7%BD%AEwayland%E7%8E%AF%E5%A2%83)
 
 ### 编辑器/IDE（neoview）
 
