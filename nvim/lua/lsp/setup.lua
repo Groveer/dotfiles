@@ -26,7 +26,7 @@ local servers = {
   clangd = require("lsp.config.clangd"),
   cmake = require("lsp.config.cmake"),
   rust_analyzer = require("lsp.config.rust"),
-  -- remark_ls = require("lsp.config.markdown"),
+  ltex = require("lsp.config.latex"),
 }
 
 for name, config in pairs(servers) do
