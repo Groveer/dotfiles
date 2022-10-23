@@ -80,12 +80,12 @@ alias ll="exa -l --icons"
 alias tree="exa -T --icons"
 alias cat="bat"
 alias top="btm --basic --group --process_command --network_use_bytes --regex --tree"
-alias cp="rsync -a"
+alias cp="rsync -avP"
 
 export PATH=$PATH:~/.local/bin
 export EDITOR=nvim
 
-export http_proxy=http://10.20.43.154:7890
+export http_proxy=http://127.0.0.1:7890
 export https_proxy=$http_proxy
 export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
