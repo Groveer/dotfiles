@@ -26,17 +26,18 @@
         },
     },
     "clock": {
-        "format": "  {:%a %m-%d %T}",
+        "format": "  {:%a %m-%d %H:%M}",
         "format-alt": "{:%Y-%m-%d}",
-        "tooltip": false,
-        "interval": 1,
+        "tooltip": true,
+        "interval": 10,
     },
     "battery": {
         "states": {
             "warning": 30,
             "critical": 15
         },
-        "tooltip": false,
+        "interval": 10,
+        "tooltip": true,
         "format": "{icon} {capacity}%",
         "format-plugged": " {capacity}%",
         "format-charging": "  {capacity}%",
@@ -54,7 +55,7 @@
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "tooltip": false,
+        "tooltip": true,
         "format-muted": "婢 Muted" ,
         "format-bluetooth": " {volume}%",
         "format-icons": {
@@ -92,7 +93,7 @@
     "bluetooth": {
         "format": "{icon}",
         "format-connected": "  {device_alias}",
-        "tooltip": false,
+        "tooltip": true,
         "tooltip-format": "{status}",
         "format-on": "",
         "format-off": "",
