@@ -54,7 +54,7 @@ db.custom_center = {
   {
     icon = "  ",
     desc = "Find text                           ",
-    action = "Telescopecope live_grep",
+    action = "Telescope live_grep",
   },
 }
 -- db.custom_header = {
