@@ -55,6 +55,8 @@ map("v", "p", '"_dP', opt)
 
 -- 退出
 map("n", "qq", ":q!<CR>", opt)
+-- 保存
+map("n", "<C-s>", ":w<CR>", opt)
 -- map("n", "<leader>q", ":qa!<CR>", opt)
 
 -- insert 模式下，跳到行首行尾
