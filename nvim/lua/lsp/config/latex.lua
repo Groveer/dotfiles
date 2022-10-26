@@ -8,6 +8,11 @@ local opts = {
     end
     require("keybindings").mapLSP(buf_set_keymap)
   end,
+  settings = {
+    ltex = {
+      language = "auto",
+    },
+  },
 }
 return {
   on_setup = function(server)
