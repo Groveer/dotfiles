@@ -73,14 +73,21 @@ source ~/.zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# need neovim package
 alias vim=nvim
+# need exa package
 alias ls="exa --icons"
 alias l="exa -al --icons"
 alias ll="exa -l --icons"
 alias tree="exa -T --icons"
+# need bat package
 alias cat="bat"
+# need bottom package
 alias top="btm --basic --group --process_command --network_use_bytes --regex --tree"
+# need rsync package
 alias cp="rsync -avP"
+# need texlive-core package
+alias lualatex="PLANTUML_JAR=/usr/share/plantuml/plantuml.jar lualatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error"
 
 export PATH=$PATH:~/.local/bin
 export EDITOR=nvim
