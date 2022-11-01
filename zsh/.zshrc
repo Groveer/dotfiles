@@ -87,7 +87,9 @@ alias top="btm --basic --group --process_command --network_use_bytes --regex --t
 # need rsync package
 alias cp="rsync -avP"
 # need texlive-core package
-alias lualatex="PLANTUML_JAR=/usr/share/plantuml/plantuml.jar lualatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error"
+PLANTUML_JAR="/usr/share/plantuml/plantuml.jar"
+[ -f "/usr/share/java/plantuml/plantuml.jar" ] && PLANTUML_JAR="/usr/share/java/plantuml/plantuml.jar"
+alias llatex="PLANTUML_JAR=${PLANTUML_JAR} lualatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error"
 
 export PATH=$PATH:~/.local/bin
 export EDITOR=nvim
