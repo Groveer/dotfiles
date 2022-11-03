@@ -107,7 +107,7 @@ source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 关于`~/.zprofile`：
 
-仅仅是设置登录`tty1`自动启动`sway`桌面，关于如何开机自动，请参考[这里](https://groveer.github.io/book/linux/auto-login.html)
+仅仅是设置登录`tty1`自动启动`sway`桌面，关于`tty`如何开机自动登陆，请参考[个人博客](https://groveer.github.io/blog/linux/auto-login/)
 
 #### wezterm
 
