@@ -34,7 +34,7 @@ set $menu wofi --show=drun --lines=5
 # output * bg /usr/share/backgrounds/sway/bg.jpg fill
 output * bg ~/.config/sway/bg.jpg fill
 
-output HDMI-A-2 scale 1.5
+output HDMI-A-2 scale 1.25
 #output DP-2 scale 1.75
 
 xwayland enabled

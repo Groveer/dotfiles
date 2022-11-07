@@ -44,7 +44,7 @@ return {
     "FiraCode Nerd Font",
     "Noto Sans CJK SC"
   }),
-  font_size = 14,
+  font_size = 12,
   -- leader = keys.leader,
   -- keys = keys.keys,
   tab_bar_at_top = true,
