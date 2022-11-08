@@ -73,30 +73,6 @@ source ~/.zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# need neovim package
-alias vim=nvim
-# need exa package
-alias ls="exa --icons"
-alias l="exa -al --icons"
-alias ll="exa -l --icons"
-alias tree="exa -T --icons"
-# need bat package
-alias cat="bat"
-# need bottom package
-alias top="btm --basic --group --process_command --network_use_bytes --regex --tree"
-# need rsync package
-alias cp="rsync -avP"
-# need texlive-core package
-PLANTUML_JAR="/usr/share/plantuml/plantuml.jar"
-[ -f "/usr/share/java/plantuml/plantuml.jar" ] && PLANTUML_JAR="/usr/share/java/plantuml/plantuml.jar"
-alias llatex="PLANTUML_JAR=${PLANTUML_JAR} lualatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error"
-
-export PATH=$PATH:~/.local/bin
-export EDITOR=nvim
-
-export http_proxy=http://127.0.0.1:7890
-export https_proxy=$http_proxy
-export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
