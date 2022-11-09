@@ -1,5 +1,6 @@
 -- utf8
 vim.g.encoding = "UTF-8"
+vim.o.fileencodings = "ucs-bom,utf-8,default,gb2312,latin1"
 vim.o.fileencoding = "utf-8"
 -- jkhl 移动时光标周围保留8行
 vim.o.scrolloff = 8
