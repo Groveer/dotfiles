@@ -1,7 +1,7 @@
 ---
 name: Unit test report
 about: File a unit test report.
-title: "[Test]: [class name]"
+title: 'Test: [class name]'
 labels: test
 assignees: ''
 
