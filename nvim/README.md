@@ -88,7 +88,11 @@
 | 标签       | Ctrl+Right | normal 模式，向右切换标签页                                         |
 | 标签       | Ctrl+c     | normal 模式，关闭当前标签页                                         |
 | 空白符     | Ctrl+t     | normal 模式，删除当前文档所有尾部空白符                             |
-| telescope  | Ctrl+p     | normal 模式，打开telescope                                          |
+| telescope  | tp         | normal 模式，查找文件                                               |
+| telescope  | tw         | normal 模式，查找当前字符串                                         |
+| telescope  | tf         | normal 模式，查找自定义字符                                         |
+| telescope  | td         | normal 模式，查找当前环境错误项                                     |
+| telescope  | ?          | normal 模式，搜索帮助标签                                           |
 | 注释       | Ctrl+/     | normal visual 模式，注释或取消注释当前行/选中行                     |
 | lsp        | ;rn        | normal 模式，重命名所有引用当前变量                                 |
 | lsp        | gd         | normal 模式，跳转到定义处                                           |
@@ -102,10 +106,8 @@
 | cmp        | Tab        | insert 模式，切换到下一条补全条目                                   |
 | cmp        | Shift+Tab  | insert 模式，切换到上一条补全条目                                   |
 | terminal   | tt         | normal 模式，以悬浮形式打开终端                                     |
-| terminal   | tg         | normal 模式，以悬浮形式打开lazygit                                  |
 | git        | hd         | normal 模式，对比当前文件的修改                                     |
 | git        | hs         | normal 模式，暂存当前块                                             |
 | git        | hS         | normal 模式，暂存当前文档                                           |
 | git        | hr         | normal 模式，取消暂存当前块                                         |
 | git        | hR         | normal 模式，取消暂存当前文档                                       |
-| git        | td         | normal 模式，在本文档中显示已删除行                                 |

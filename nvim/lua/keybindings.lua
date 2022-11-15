@@ -103,7 +103,11 @@ map("n", "<C-c>", ":Bdelete!<CR>", opt)
 map("n", "<C-t>", ":StripTrailingWhitespace<CR>", opt)
 
 -- Telescope
-map("n", "<C-p>", ":Telescope<CR>", opt)
+map("n", "tp", ":Telescope find_files<CR>", opt)
+map("n", "tw", ":Telescope grep_string<CR>", opt)
+map("n", "tf", ":Telescope live_grep<CR>", opt)
+map("n", "td", ":Telescope diagnostics<CR>", opt)
+map("n", "?", ":Telescope help_tags<CR>", opt)
 
 -- 代码注释插件
 -- see ./lua/plugin-config/comment.lua
@@ -210,8 +214,8 @@ pluginKeys.cmp = function(cmp)
     }),
     -- ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
     -- 如果窗口内容太多，可以滚动
-    ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
-    ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
+    ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
+    ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
 
     -- super Tab
     ["<Tab>"] = cmp.mapping(function(fallback)
@@ -237,15 +241,10 @@ pluginKeys.cmp = function(cmp)
   }
 end
 
--- 自定义 toggleterm 3个不同类型的命令行窗口
--- <leader>tt 浮动
--- <leader>tr 右侧
--- <leader>td 下方
--- 特殊lazygit 窗口，需要安装lazygit
--- <leader>tg lazygit
+-- 自定义 toggleterm 命令行窗口
+-- tt 浮动
 pluginKeys.mapToggleTerm = function(toggleterm)
   vim.keymap.set({ "n", "t" }, "tt", toggleterm.toggleA)
-  vim.keymap.set({ "n", "t" }, "tg", toggleterm.toggleG)
 end
 
 -- gitsigns
@@ -279,10 +278,8 @@ pluginKeys.gitsigns_on_attach = function(bufnr)
     map('n', 'hR', gs.reset_buffer)
     map('n', 'hp', gs.preview_hunk)
     map('n', 'hb', function() gs.blame_line{full=true} end)
-    map('n', 'tb', gs.toggle_current_line_blame)
     map('n', 'hd', gs.diffthis)
     map('n', 'hD', function() gs.diffthis('~') end)
-    map('n', 'td', gs.toggle_deleted)
 
     -- Text object
     map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
