@@ -25,9 +25,10 @@ local servers = {
   jsonls = require("lsp.config.json"),
   clangd = require("lsp.config.clangd"),
   cmake = require("lsp.config.cmake"),
-  rust_analyzer = require("lsp.config.rust"),
-  ltex = require("lsp.config.latex"),
-  gopls = require("lsp.config.golang"),
+  -- 非常用语言自行取消注释，默认不安装
+  -- rust_analyzer = require("lsp.config.rust"),
+  -- ltex = require("lsp.config.latex"),
+  -- gopls = require("lsp.config.golang"),
 }
 
 for name, config in pairs(servers) do
