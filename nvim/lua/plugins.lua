@@ -113,7 +113,7 @@ packer.startup({
     -- git
     use({ "lewis6991/gitsigns.nvim" })
     ----------------------------------------------
-    -- use("j-hui/fidget.nvim")
+    use("j-hui/fidget.nvim")
     use({'jdhao/whitespace.nvim', event = 'VimEnter'})
     -- plantuml
     use({'tyru/open-browser.vim', ft = {'plantuml'}, event = 'BufEnter'})

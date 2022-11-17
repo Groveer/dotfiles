@@ -132,7 +132,7 @@ pluginKeys.mapLSP = function(mapbuf)
   -- rename
   mapbuf("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opt)
   -- code action
-  -- mapbuf("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
+  mapbuf("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
   -- go xx
   mapbuf("n", "gd", "<cmd>lua require'telescope.builtin'.lsp_definitions({ initial_mode = 'normal', })<CR>", opt)
   mapbuf("n", "gh", "<cmd>Lspsaga preview_definition<CR>", opt)

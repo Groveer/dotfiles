@@ -25,6 +25,7 @@ local servers = {
   jsonls = require("lsp.config.json"),
   clangd = require("lsp.config.clangd"),
   cmake = require("lsp.config.cmake"),
+  qmlls = require("lsp.config.qml"),
   -- 非常用语言自行取消注释，默认不安装
   -- rust_analyzer = require("lsp.config.rust"),
   -- ltex = require("lsp.config.latex"),
