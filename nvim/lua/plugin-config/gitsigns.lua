@@ -15,7 +15,8 @@ gitsigns.setup({
     topdelete = { hl = "GitSignsDelete", text = "D‾", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
     changedelete = { hl = "GitSignsChange", text = "D~", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
   },
-  show_deleted = true,
+  -- 显示已删除内容
+  -- show_deleted = true,
   -- 显示图标
   signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
   -- 行数高亮
