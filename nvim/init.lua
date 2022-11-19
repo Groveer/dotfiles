@@ -23,8 +23,6 @@ require("plugin-config.gitsigns")
 require("plugin-config.tokyonight")
 require("plugin-config.todo-comments")
 require("plugin-config.nvim-notify")
--- 主题设置 主题设置要在主题插件配置之后进行配置，否则不生效
-require("colorscheme")
 -- 内置LSP
 require("lsp.setup")
 require("lsp.cmp")
