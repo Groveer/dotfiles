@@ -124,6 +124,8 @@ pluginKeys.comment = {
   },
 }
 -- ctrl + /
+map("n", "<C-_>", "gcc", { noremap = false })
+map("v", "<C-_>", "gcc", { noremap = false })
 map("n", "<C-/>", "gcc", { noremap = false })
 map("v", "<C-/>", "gcc", { noremap = false })
 
