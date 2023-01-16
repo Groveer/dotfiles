@@ -260,6 +260,5 @@ bindsym Ctrl+Alt+a exec 'grim -g "$(slurp)" - | wl-copy && notify-send -t 3000 g
 
 include /etc/sway/config.d/*
 
-exec wl-paste -t text --watch clipman store --no-persist
 exec_always fcitx5 -d --replace
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
