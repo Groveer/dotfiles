@@ -7,7 +7,7 @@ end
 db.custom_footer = {
   "",
   "",
-  "https://github.com/groveer/learn-neovim-lua",
+  "https://github.com/groveer/dotfiles/tree/master/nvim",
 }
 
 db.custom_center = {
@@ -31,11 +31,11 @@ db.custom_center = {
   --   desc = "Edit Projects                       ",
   --   action = "edit ~/.local/share/nvim/project_nvim/project_history",
   -- },
-  {
-    icon = "  ",
-    desc = "Edit .zshrc                        ",
-    action = "edit ~/.zshrc",
-  },
+  -- {
+  --   icon = "  ",
+  --   desc = "Edit .zshrc                        ",
+  --   action = "edit ~/.zshrc",
+  -- },
   -- {
   --   icon = "  ",
   --   desc = "Change colorscheme                  ",
