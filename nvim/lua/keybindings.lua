@@ -51,12 +51,14 @@ map("v", "<C-Down>", ":move '>+1<CR>gv-gv", opt)
 map("v", "<C-Up>", ":move '<-2<CR>gv-gv", opt)
 
 -- 在visual mode 里粘贴不要复制
-map("v", "p", '"_dP', opt)
+-- map("v", "p", '"_dP', opt)
 
 -- 退出
 map("n", "qq", ":q!<CR>", opt)
+map("n", "<C-q>", ":cq<CR>", opt)
 -- 保存
 map("n", "<C-s>", ":w<CR>", opt)
+map("n", "<C-S-s>", "<cmd>wa<CR>", opt)
 -- map("n", "<leader>q", ":qa!<CR>", opt)
 
 -- insert 模式下，跳到行首行尾
@@ -135,7 +137,7 @@ pluginKeys.mapLSP = function(mapbuf)
   mapbuf("n", "gr", "<cmd>Lspsaga rename<CR>", opt)
   mapbuf("n", "gr", "<cmd>Lspsaga rename ++project<CR>", opt)
   -- code action
-  mapbuf("n", "ga", "<cmd>Lspsaga code_action<CR>", opt)
+  mapbuf("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
   -- go xx
   mapbuf("n", "gp", "<cmd>Lspsaga peek_definition<CR>", opt)
   mapbuf("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opt)

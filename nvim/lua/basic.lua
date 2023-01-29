@@ -13,7 +13,7 @@ vim.wo.cursorline = true
 -- 显示左侧图标指示列
 vim.wo.signcolumn = "yes"
 -- 右侧参考线，超过表示代码太长了，考虑换行
---vim.wo.colorcolumn = "80"
+-- vim.wo.colorcolumn = "80"
 -- 缩进4个空格等于一个Tab
 vim.o.tabstop = 4
 vim.bo.tabstop = 4
@@ -79,11 +79,11 @@ vim.o.pumheight = 8
 -- 永远显示 tabline
 vim.o.showtabline = 2
 -- 使用增强状态栏插件后不再需要 vim 的模式提示
-vim.o.showmode = false
+vim.o.showmode = true
 -- 配置剪切板
 vim.opt.clipboard = "unnamedplus"
 -- 使用filetype
-vim.g.do_filetype_lua = 1
+-- vim.g.do_filetype_lua = 1
 
 vim.g.loaded_python3_provider = 0
 
