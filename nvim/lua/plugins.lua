@@ -52,12 +52,6 @@ lazy.setup({
     },
     -- telescope extensions
     "nvim-telescope/telescope-ui-select.nvim",
-    -- dashboard-nvim
-    {
-      'glepnir/dashboard-nvim',
-      event = 'VimEnter',
-      dependencies = { "nvim-tree/nvim-web-devicons" },
-    },
     -- project
     "ahmedkhalf/project.nvim",
     -- treesitter

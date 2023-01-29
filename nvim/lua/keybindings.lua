@@ -110,6 +110,7 @@ map("n", "fw", "<cmd>Telescope grep_string<CR>", opt)
 map("n", "fg", "<cmd>Telescope live_grep<CR>", opt)
 map("n", "fd", "<cmd>Telescope diagnostics<CR>", opt)
 map("n", "fh", "<cmd>Telescope help_tags<CR>", opt)
+map("n", "fn", "<cmd>Telescope notify<CR>", opt)
 
 -- 代码注释插件
 -- see ./lua/plugin-config/comment.lua
