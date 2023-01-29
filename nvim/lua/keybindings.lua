@@ -87,27 +87,27 @@ map("n", "s=", "<C-w>=", opt)
 local pluginKeys = {}
 
 -- treesitter 折叠
-map("n", "zz", ":foldclose<CR>", opt)
-map("n", "Z", ":foldopen<CR>", opt)
+map("n", "zz", "<cmd>foldclose<CR>", opt)
+map("n", "Z", "<cmd>foldopen<CR>", opt)
 
 -- nvim-tree
-map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
+map("n", "<A-m>", "<cmd>NvimTreeToggle<CR>", opt)
 
 -- bufferline 左右Tab切换
-map("n", "<C-Left>", ":BufferLineCyclePrev<CR>", opt)
-map("n", "<C-Right>", ":BufferLineCycleNext<CR>", opt)
+map("n", "<C-Left>", "<cmd>BufferLineCyclePrev<CR>", opt)
+map("n", "<C-Right>", "<cmd>BufferLineCycleNext<CR>", opt)
 -- "moll/vim-bbye" 关闭当前 buffer
-map("n", "<C-c>", ":Bdelete!<CR>", opt)
+map("n", "<C-c>", "<cmd>Bdelete!<CR>", opt)
 
 -- whitespace
-map("n", "<C-t>", ":StripTrailingWhitespace<CR>", opt)
+map("n", "<C-t>", "<cmd>StripTrailingWhitespace<CR>", opt)
 
 -- Telescope
-map("n", "tp", ":Telescope find_files<CR>", opt)
-map("n", "tw", ":Telescope grep_string<CR>", opt)
-map("n", "tf", ":Telescope live_grep<CR>", opt)
-map("n", "td", ":Telescope diagnostics<CR>", opt)
-map("n", "?", ":Telescope help_tags<CR>", opt)
+map("n", "ff", "<cmd>Telescope find_files<CR>", opt)
+map("n", "fw", "<cmd>Telescope grep_string<CR>", opt)
+map("n", "fg", "<cmd>Telescope live_grep<CR>", opt)
+map("n", "fd", "<cmd>Telescope diagnostics<CR>", opt)
+map("n", "fh", "<cmd>Telescope help_tags<CR>", opt)
 
 -- 代码注释插件
 -- see ./lua/plugin-config/comment.lua
@@ -132,28 +132,29 @@ map("v", "<C-/>", "gcc", { noremap = false })
 -- lsp 回调函数快捷键设置
 pluginKeys.mapLSP = function(mapbuf)
   -- rename
-  mapbuf("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opt)
+  mapbuf("n", "gr", "<cmd>Lspsaga rename<CR>", opt)
+  mapbuf("n", "gr", "<cmd>Lspsaga rename ++project<CR>", opt)
   -- code action
-  mapbuf("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
+  mapbuf("n", "ga", "<cmd>Lspsaga code_action<CR>", opt)
   -- go xx
-  mapbuf("n", "gd", "<cmd>lua require'telescope.builtin'.lsp_definitions({ initial_mode = 'normal', })<CR>", opt)
-  mapbuf("n", "gh", "<cmd>Lspsaga preview_definition<CR>", opt)
-  mapbuf("n", "gr", "<cmd>Lspsaga lsp_finder<CR>", opt)
+  mapbuf("n", "gp", "<cmd>Lspsaga peek_definition<CR>", opt)
+  mapbuf("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opt)
+  mapbuf("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", opt)
   -- diagnostic
-  mapbuf("n", "gp", "<cmd>Lspsaga show_line_diagnostics<CR>", opt)
+  -- mapbuf("n", "<leader>sl", "<cmd>Lspsaga show_line_diagnostics<CR>", opt)
+  -- mapbuf("n", "<leader>sc", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opt)
+  -- mapbuf("n", "<leader>sb", "<cmd>Lspsaga show_buf_diagnostics<CR>", opt)
   mapbuf("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<CR>", opt)
   mapbuf("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opt)
-  mapbuf("n", "gc", "<cmd>Lspsaga yank_line_diagnostics<CR>", opt)
+  -- mapbuf("n", "gc", "<cmd>Lspsaga yank_line_diagnostics<CR>", opt)
   mapbuf("n", "<leader>f", "<cmd>lua vim.lsp.buf.format { async = true }<CR>", opt)
-  -- 未用
-  -- mapbuf("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opt)
-  -- mapbuf("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opt)
-  -- mapbuf('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opt)
-  -- mapbuf("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opt)
-  -- mapbuf('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opt)
-  -- mapbuf('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opt)
-  -- mapbuf('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opt)
-  -- mapbuf('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opt)
+
+  mapbuf("n", "<leader>o", "<cmd>Lspsaga outline<CR>", opt)
+
+  mapbuf("n", "K", "<cmd>Lspsaga hover_doc<CR>", opt)
+  -- mapbuf("n", "K", "<cmd>Lspsaga hover_doc ++keep<CR>", opt)
+
+  mapbuf("n", "<A-d>", "<cmd>Lspsaga term_toggle<CR>", opt)
 end
 
 -- nvim-dap
@@ -241,12 +242,6 @@ pluginKeys.cmp = function(cmp)
     end, { "i", "s" }),
     -- end of super Tab
   }
-end
-
--- 自定义 toggleterm 命令行窗口
--- tt 浮动
-pluginKeys.mapToggleTerm = function(toggleterm)
-  vim.keymap.set({ "n", "t" }, "tt", toggleterm.toggleA)
 end
 
 -- gitsigns

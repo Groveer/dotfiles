@@ -45,8 +45,7 @@
 │  │  ├── nvim-treesitter.lua
 │  │  ├── project.lua
 │  │  ├── telescope.lua
-│  │  ├── todo-comments.lua
-│  │  └── toggleterm.lua
+│  │  └── todo-comments.lua
 │  ├── plugins.lua        // 要安装哪些插件，可以在此设置
 │  └── utils              // 通用设置
 │     ├── change-colorscheme.lua
@@ -88,24 +87,24 @@
 | 标签       | Ctrl+Right | normal 模式，向右切换标签页                                         |
 | 标签       | Ctrl+c     | normal 模式，关闭当前标签页                                         |
 | 空白符     | Ctrl+t     | normal 模式，删除当前文档所有尾部空白符                             |
-| telescope  | tp         | normal 模式，查找文件                                               |
-| telescope  | tw         | normal 模式，查找当前字符串                                         |
-| telescope  | tf         | normal 模式，查找自定义字符                                         |
-| telescope  | td         | normal 模式，查找当前环境错误项                                     |
-| telescope  | ?          | normal 模式，搜索帮助标签                                           |
+| telescope  | ff         | normal 模式，查找文件                                               |
+| telescope  | fw         | normal 模式，查找当前字符串                                         |
+| telescope  | fg         | normal 模式，查找自定义字符                                         |
+| telescope  | fd         | normal 模式，查找当前环境错误项                                     |
+| telescope  | fh         | normal 模式，搜索帮助标签                                           |
 | 注释       | Ctrl+/     | normal visual 模式，注释或取消注释当前行/选中行                     |
-| lsp        | ;rn        | normal 模式，重命名所有引用当前变量                                 |
+| lsp        | ga         | normal 模式，code action                                            |
+| lsp        | gr         | normal 模式，重命名所有引用当前变量                                 |
 | lsp        | gd         | normal 模式，跳转到定义处                                           |
 | lsp        | gh         | normal 模式，预览定义                                               |
-| lsp        | gr         | normal 模式，查看所有引用                                           |
-| lsp        | gp         | normal 模式，显示当前错误信息                                       |
 | lsp        | gj         | normal 模式，跳转到下一条错误处                                     |
 | lsp        | gk         | normal 模式，跳转到上一条错误处                                     |
-| lsp        | gc         | normal 模式，复制当前错误到剪切板                                   |
 | lsp        | ;f         | normal 模式，格式化当前文档                                         |
+| lsp        | ;o         | normal 模式，显示outline                                            |
+| lsp        | K          | normal 模式，显示文档                                               |
+| lsp        | Alt+d      | normal 模式，弹出终端                                               |
 | cmp        | Tab        | insert 模式，切换到下一条补全条目                                   |
 | cmp        | Shift+Tab  | insert 模式，切换到上一条补全条目                                   |
-| terminal   | tt         | normal 模式，以悬浮形式打开终端                                     |
 | git        | hd         | normal 模式，对比当前文件的修改                                     |
 | git        | hs         | normal 模式，暂存当前块                                             |
 | git        | hS         | normal 模式，暂存当前文档                                           |

@@ -25,48 +25,52 @@ end
 
 lazy.setup({
     -- Packer 可以升级自己
-    -- "folke/lazy.nvim",
+    "folke/lazy.nvim",
     -------------------------- plugins -------------------------------------------
     -- nvim-tree
     {
       "nvim-tree/nvim-tree.lua",
       dependencies = "nvim-tree/nvim-web-devicons",
-      tag = 'nightly' -- optional, updated every week. (see issue #1193)
+      version = 'nightly' -- optional, updated every week. (see issue #1193)
     },
     -- bufferline
     {
       "akinsho/bufferline.nvim",
       dependencies = { "nvim-tree/nvim-web-devicons" },
+      version = "v3.*",
     },
     -- lualine
     {
       "nvim-lualine/lualine.nvim",
-      dependencies = { "nvim-tree/nvim-web-devicons" },
+      dependencies = { "nvim-tree/nvim-web-devicons", lazy =true },
     },
     -- telescope
     {
       "nvim-telescope/telescope.nvim",
       dependencies = { "nvim-lua/plenary.nvim" },
+      version = '0.1.1',
     },
     -- telescope extensions
-    "LinArcX/telescope-env.nvim",
     "nvim-telescope/telescope-ui-select.nvim",
     -- dashboard-nvim
-    "glepnir/dashboard-nvim",
+    {
+      'glepnir/dashboard-nvim',
+      event = 'VimEnter',
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
     -- project
     "ahmedkhalf/project.nvim",
     -- treesitter
     {
       "nvim-treesitter/nvim-treesitter",
-      run = ":TSUpdate",
+      build = ":TSUpdate",
     },
-    "p00f/nvim-ts-rainbow",
+    "HiPhish/nvim-ts-rainbow2",
     -- indent-blankline
     "lukas-reineke/indent-blankline.nvim",
     --------------------- LSP --------------------
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
-    -- Lspconfig
     "neovim/nvim-lspconfig",
     -- 补全引擎
     "hrsh7th/nvim-cmp",
@@ -84,7 +88,11 @@ lazy.setup({
     "rafamadriz/friendly-snippets",
     -- UI 增强
     "onsails/lspkind-nvim",
-    "tami5/lspsaga.nvim",
+    {
+      "glepnir/lspsaga.nvim",
+      event = "BufRead",
+      dependencies = { "nvim-tree/nvim-web-devicons" }
+    },
     -- 代码格式化
     -- use("mhartington/formatter.nvim")
     -- use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
@@ -96,16 +104,16 @@ lazy.setup({
     -- tokyonight
     "folke/tokyonight.nvim",
     -------------------------------------------------------
-    "akinsho/toggleterm.nvim",
     -- Comment
     "numToStr/Comment.nvim",
     -- nvim-autopairs
     "windwp/nvim-autopairs",
     -- git
     "lewis6991/gitsigns.nvim",
+    "moll/vim-bbye",
     ----------------------------------------------
     "j-hui/fidget.nvim",
-    {'jdhao/whitespace.nvim', event = 'VimEnter'},
+    {'johnfrankmorgan/whitespace.nvim'},
     -- plantuml
     {'tyru/open-browser.vim', ft = {'plantuml'}, event = 'BufEnter'},
     {'aklt/plantuml-syntax'},
