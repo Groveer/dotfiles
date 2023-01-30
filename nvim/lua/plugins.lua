@@ -107,12 +107,9 @@ lazy.setup({
     "moll/vim-bbye",
     ----------------------------------------------
     "j-hui/fidget.nvim",
-    {'johnfrankmorgan/whitespace.nvim'},
-    -- plantuml
-    {'tyru/open-browser.vim', ft = {'plantuml'}, event = 'BufEnter'},
-    {'aklt/plantuml-syntax'},
-    -- use({'weirongxu/plantuml-previewer.vim', ft = {'plantuml'}, event = 'BufEnter'})
-    {"rcarriga/nvim-notify"},
+    "johnfrankmorgan/whitespace.nvim",
+    ----------------------------------------------
+    "rcarriga/nvim-notify",
     {
         "folke/todo-comments.nvim",
         dependencies = "nvim-lua/plenary.nvim"
