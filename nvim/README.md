@@ -1,3 +1,5 @@
+# 本项目已废弃，neovim 配置迁移至[nvimdots](https://github.com/Groveer/nvimdots)
+
 # 将 Neovim 打造成为自己的 IDE
 
 本项目配置参考[learn-neovim-lua](https://github.com/nshen/learn-neovim-lua)，但大部分快捷键经过重设（因为本人不喜欢快捷键被重度修改，对新手不够友好），由于本人主要做 C++ 开发工作，所以本项目完全适用 C++ 开发场景。
@@ -57,7 +59,7 @@
 
 这里列出一些常用快捷键说明，也可以查看或修改 keybindings.lua 文件
 
-关于nvim-tree的快捷键可参考[官方文档](https://github.com/nvim-tree/nvim-tree.lua)
+关于 nvim-tree 的快捷键可参考[官方文档](https://github.com/nvim-tree/nvim-tree.lua)
 
 | **分类**   | **快捷键** | **说明**                                                            |
 | ---------- | ---------- | ------------------------------------------------------------------- |
@@ -65,7 +67,7 @@
 | 通用       | qq         | normal 模式，退出                                                   |
 | todo       | ]t         | normal 模式，下一个注释标签                                         |
 | todo       | [t         | normal 模式，上一个注释标签                                         |
-| todo       | lt         | normal 模式, 在telescope中列出标签                                  |
+| todo       | lt         | normal 模式, 在 telescope 中列出标签                                |
 | 缩进       | <          | visual 模式，左缩进                                                 |
 | 缩进       | >          | visual 模式，右缩进                                                 |
 | 移动       | Ctrl+Up    | visual 模式， 向上移动选中文本                                      |
@@ -100,7 +102,7 @@
 | lsp        | gj         | normal 模式，跳转到下一条错误处                                     |
 | lsp        | gk         | normal 模式，跳转到上一条错误处                                     |
 | lsp        | ;f         | normal 模式，格式化当前文档                                         |
-| lsp        | ;o         | normal 模式，显示outline                                            |
+| lsp        | ;o         | normal 模式，显示 outline                                           |
 | lsp        | K          | normal 模式，显示文档                                               |
 | lsp        | Alt+d      | normal 模式，弹出终端                                               |
 | cmp        | Tab        | insert 模式，切换到下一条补全条目                                   |
