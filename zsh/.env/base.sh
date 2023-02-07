@@ -5,11 +5,6 @@ export EDITOR=vim
 # export https_proxy=$http_proxy
 # export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
 
-# need neovim package
-if [ -x "/usr/bin/nvim" ]; then
-    alias vim=nvim
-fi
-
 # need exa package
 if [ -x "/usr/bin/exa" ]; then
     alias ls="exa --icons"
