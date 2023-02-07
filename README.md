@@ -15,8 +15,15 @@ Sway 是一款专为 Wayland 设计的合成器，旨在与 i3 完全兼容。�
 1. 要完全使用 sway 桌面环境，需安装以下包。
 
 ```bash
-nerd-fonts-complete waybar wofi polkit-gnome sway-im wl-clipboard swayidle swaylock brightnessctl playerctl grim slurp mako xdg-desktop-portal-wlr
+nerd-fonts-fira-code waybar wofi polkit-gnome sway-im wl-clipboard swayidle swaylock brightnessctl playerctl grim slurp mako xdg-desktop-portal-wlr
 ```
+
+若使用[Hyprland](https://hyprland.org/)，只需将`sway-im`替换为`hyprland`:
+```bash
+nerd-fonts-fira-code waybar wofi polkit-gnome hyprland wl-clipboard swayidle swaylock brightnessctl playerctl grim slurp mako xdg-desktop-portal-wlr
+```
+**最后需将本项目中的`startde`脚本拷贝到`~/.local/bin/`目录。**
+
 2. 要使用基本环境，只需安装部分包。
 
 * `sway-im`：该包在 aur 仓库中，官方仓库是`sway`这个包，使用`sway-im`的原因是它对输入法更友好，支持候选栏展示，而官方版本却没有这个功能。
@@ -45,6 +52,10 @@ nerd-fonts-complete waybar wofi polkit-gnome sway-im wl-clipboard swayidle swayl
 6. 使用`wl-clipboard`来实现方便的复制功能。
 7. 快捷键的配置请参考[配置文件](sway/config)。
 8. `sway`完全配置参考[官方文档](https://github.com/swaywm/sway/wiki)。
+
+#### hyprland
+
+hyprland配置与sway大部分保持一致。
 
 #### waybar
 
