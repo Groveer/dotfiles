@@ -1,8 +1,11 @@
 # Personal Configurations
-<!-- <a id="top"></a> -->
+
+<a id="top"></a>
+
 English | [中文](README.zh.md)
 
 ## Themes
+
 <div align="center">
 
 ![hyde_banner](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/hyde_banner.png)
@@ -15,7 +18,7 @@ https://github.com/prasanthrangan/hyprdots/assets/106020512/7f8fadc8-e293-4482-a
 
 <div align="right">
   <br>
-  <a href="#top"><kbd> <br> 🡅 <br> </kbd></a>
+  <a href="#top"><kbd> <br>  <br> </kbd></a>
 </div>
 
 **You can have the same user experience as me in Archlinux**
@@ -39,7 +42,10 @@ chsh -s /bin/zsh
 2. fonts
 
 Download fonts from here: [MapleMono-NF-CN.zip](https://github.com/subframe7536/Maple-font/releases)
+
 ```bash
+wget https://github.com/subframe7536/maple-font/releases/latest/download/MapleMono-NF-CN-unhinted.zip   # screen > 1080p
+wget https://github.com/subframe7536/maple-font/releases/latest/download/MapleMono-NF-CN.zip            # screen <= 1080p
 unzip MapleMono-NF-CN.zip -d MapleFont
 sudo cp -r MapleFont /usr/share/fonts
 sudo fc-cache -fv
@@ -60,7 +66,7 @@ yay -S dunst libnotify hyprland rofi-wayland waybar swww swaylock-effects wlogou
 5. dependency
 
 ```bash
-yay -S polkit-gnome xdg-desktop-portal-hyprland python-pyamdgpuinfo parallel imagemagick qt5-imageformats brightnessctl pavucontrol pamixer pacman-contrib
+yay -S polkit-gnome xdg-desktop-portal-hyprland parallel imagemagick qt5-imageformats brightnessctl pavucontrol pamixer pacman-contrib
 ```
 
 6. theme
@@ -72,7 +78,7 @@ yay -S nwg-look kvantum qt5ct qt6ct
 7. apps
 
 ```bash
-yay -S google-chrome/firefox kitty fastfetch neovim fcitx5
+yay -S google-chrome/firefox/zen-browser kitty fastfetch neovim fcitx5
 ```
 
 8. others
@@ -81,11 +87,20 @@ yay -S google-chrome/firefox kitty fastfetch neovim fcitx5
 pip install hyprshade
 ```
 
+If you use amdgpu, can install:
+
+```bash
+pip install pyamdgpuinfo
+```
+
 ## Init
 
-1. Install all packages
-2. Run `./init.sh`, it will initialize env and patch sources.
-3. If there is a conflicting file, delete it manually. run `./config.sh install`
+1. Install all packages.
+2. Run `./config.sh install`, it will initialize env.
+3. Run `chsh -s /bin/zsh`.
+4. Relogin user and run `startde w`.
+5. Run `./init.sh`, it will patch sources.
+6. If there is a conflicting file, delete it manually. run `./config.sh install`
 
 > [!IMPORTANT]
 > `./init.sh` will excuable `./config.sh install`. **It will rm your `~/.bashrc`, please backup your `~/.bashrc` first!**
@@ -113,47 +128,41 @@ It is easy to rm the symbol, just run `./config.sh uninstall`
 Install packages:
 
 ```bash
-yay -S python pyenv fnm
+yay -S python fnm
 ```
 
-list python versions:
+Init python:
 
 ```bash
-pyenv install --list
+python -m venv ~/.python_venv
 ```
 
-install python for a select version:
+When after update python, can update venv:
 
 ```bash
-pyenv install <version>
+python -m venv --upgrade ~/.python_venv
 ```
 
-use python for a select version:
-
-```bash
-pyenv shell <version>
-```
-
-install nodejs:
+Install nodejs:
 
 ```bash
 fnm install <version/--latest>
 fnm default <version>
 ```
 
+Install rust:
+
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-Restart terminal for apply environment.
+Update rust:
 
 ```bash
-pip install pynvim
+rustup update stable
 ```
 
-```bash
-npm i -g neovim
-```
+Restart terminal will auto apply env.
 
 `pip` and `npm` are just the basic environment configuration of neovim, it is highly recommended to use the `:checkhealth` command to see which commands are not installed after running the configuration of lua, you can continue to use the corresponding package management for installation!
 
@@ -161,8 +170,8 @@ npm i -g neovim
 
 default use git ssh, if you use http, modify `.gitmodules`, set `url`:
 
-```
-https://github.com/groveer/nvchad-starter.git
+```txt
+https://github.com/groveer/nvvim.git
 ```
 
 Update git submodule:
@@ -173,7 +182,7 @@ git submodule update --init
 
 <div align="right">
   <br>
-  <a href="#top"><kbd> <br> 🡅 <br> </kbd></a>
+  <a href="#top"><kbd> <br>  <br> </kbd></a>
 </div>
 
 ## Thanks to
