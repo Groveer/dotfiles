@@ -42,6 +42,8 @@ dict=(
     [npm]=npm
     [cargo]=cargo
     [chrome]=google-chrome-stable
+    [nix]=nix
+    ["home-manager"]=nix
 )
 
 get_dir() {
