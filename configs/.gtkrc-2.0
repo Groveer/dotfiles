@@ -3,10 +3,10 @@
 
 include "/home/guo/.gtkrc-2.0.mine"
 gtk-theme-name="Tokyo-Night"
-gtk-icon-theme-name="BeautyLine"
+gtk-icon-theme-name="Adwaita"
 gtk-font-name="Maple Mono NF CN 12"
 gtk-cursor-theme-name="Gruvbox-Retro"
-gtk-cursor-theme-size=20
+gtk-cursor-theme-size=18
 gtk-toolbar-style=GTK_TOOLBAR_ICONS
 gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
 gtk-button-images=0
