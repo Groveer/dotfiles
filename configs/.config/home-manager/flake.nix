@@ -19,7 +19,8 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
       in {
-        homeConfigurations.lxz = home-manager.lib.homeManagerConfiguration {
+        # 'guo' is the username of the user whose home directory is being managed.
+        homeConfigurations.guo = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
 
           # Specify your home configuration modules here, for example,
