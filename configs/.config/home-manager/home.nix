@@ -11,9 +11,9 @@
     cargo
     nix-index
     nix-update
-
+    python
     nodejs
-
+    git
     neovim
     lua
     starship
