@@ -11,7 +11,7 @@
     cargo
     nix-index
     nix-update
-    python
+    python3
     nodejs
     git
     neovim
@@ -43,7 +43,7 @@
     "..." = "cd ../..";
   };
 
-  home.stateVersion = "24.05";
+  home.stateVersion = "24.11";
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
