@@ -42,6 +42,7 @@ dict=(
     [npm]=npm
     [cargo]=cargo
     [chrome]=google-chrome-stable
+    [chromium]=chromium
     [nix]=nix
     ["home-manager"]=nix
 )
