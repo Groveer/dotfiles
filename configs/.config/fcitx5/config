@@ -11,6 +11,8 @@ EnumerateSkipFirst=False
 EnumerateGroupForwardKeys=
 # 向后切换输入法分组
 EnumerateGroupBackwardKeys=
+# 触发修饰键快捷键的时限 (毫秒)
+ModifierOnlyKeyTimeout=250
 
 [Hotkey/TriggerKeys]
 0=Control+space

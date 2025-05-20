@@ -64,7 +64,7 @@
     progress_bar_corner_radius = 4
 
     # Corner radius for the icon image.
-    icon_corner_radius = 10
+    icon_corner_radius = 12
 
     # Show how many messages are currently hidden (because of
     # notification_limit).
@@ -250,7 +250,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 10
+    corner_radius = 12
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
