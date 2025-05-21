@@ -15,6 +15,10 @@ if [[ "$PATH" != *"$HOME/.local/bin"* ]]; then
     export PATH=$HOME/.local/bin:$PATH
 fi
 
+if [ -e ${HOME}/.nix-profile/etc/profile.d/nix.sh ] && [[ "$PATH" != *"nix"* ]]; then
+    . ${HOME}/.nix-profile/etc/profile.d/nix.sh
+fi
+
 if test -d "/opt/nvim-linux64/bin" && [[ "$PATH" != *"nvim"* ]]; then
     export PATH="$PATH:/opt/nvim-linux64/bin"
 fi
