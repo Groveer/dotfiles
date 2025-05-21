@@ -15,7 +15,7 @@ if [[ "$PATH" != *"$HOME/.local/bin"* ]]; then
     export PATH=$HOME/.local/bin:$PATH
 fi
 
-if test -d "/opt/nvim-linux64/bin"; then
+if test -d "/opt/nvim-linux64/bin" && [[ "$PATH" != *"nvim"* ]]; then
     export PATH="$PATH:/opt/nvim-linux64/bin"
 fi
 
@@ -53,7 +53,7 @@ fi
 if command -v starship >/dev/null; then
     eval "$(starship init zsh)"
 fi
-if command -v fnm >/dev/null; then
+if command -v fnm >/dev/null && [[ "$PATH" != *"fnm"* ]]; then
     eval "$(fnm env --use-on-cd)"
 fi
 if [[ -d /usr/lib/qt6/bin ]] && [[ "$PATH" != *"qt6/bin"* ]]; then
@@ -109,7 +109,7 @@ zinit wait lucid light-mode for \
 
 #===================== User Configuration Start =====================
 
-if [[ "$PATH" != *"distcc"* ]]; then
+if command -v distcc >/dev/null && [[ "$PATH" != *"distcc"* ]]; then
     export PATH="/usr/lib/distcc/bin/:$PATH"
 fi
 
