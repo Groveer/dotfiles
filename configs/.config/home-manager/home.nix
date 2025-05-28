@@ -8,7 +8,6 @@
   home.packages = with pkgs; [
     htop
     ripgrep
-    cargo
     nix-index
     nix-update
     python3
@@ -18,12 +17,6 @@
     lua
     starship
   ];
-
-  # neovim nightly
-
-  # nixpkgs.overlays = [
-  #   inputs.neovim-nightly-overlay.overlays.default
-  # ];
 
   fonts.fontconfig.enable = true; # Allow fontconfig to discover fonts in home.packages
 
