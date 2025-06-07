@@ -32,7 +32,7 @@ https://github.com/prasanthrangan/hyprdots/assets/106020512/7f8fadc8-e293-4482-a
 1. shell
 
 ```bash
-yay -S zsh eza rsync bat starship htop
+yay -S zsh eza rsync bat starship htop jq fastfetch neovim
 ```
 
 ```bash
@@ -51,37 +51,35 @@ sudo cp -r MapleFont /usr/share/fonts
 sudo fc-cache -fv
 ```
 
-3. utils
+3. hypr
 
 ```bash
-yay -S qt5-wayland qt6-wayland
+yay -S dunst libnotify hyprland rofi-wayland waybar swww swaylock-effects grimblast-git cliphist pipewire-pulse swappy wf-recorder
 ```
 
-4. hypr
-
-```bash
-yay -S dunst libnotify hyprland rofi-wayland waybar swww swaylock-effects wlogout grimblast-git cliphist pipewire-pulse swappy hyde-cli-git wf-recorder
-```
-
-5. dependency
+4. dependency
 
 ```bash
 yay -S polkit-gnome xdg-desktop-portal-hyprland parallel imagemagick qt5-imageformats brightnessctl pavucontrol pamixer pacman-contrib
 ```
 
-6. theme
+5. theme
 
 ```bash
-yay -S nwg-look kvantum qt5ct qt6ct
+yay -S nwg-look kvantum qt5ct qt6ct qt5-wayland qt6-wayland
 ```
 
-7. apps
+6. apps
 
 ```bash
-yay -S google-chrome/firefox/zen-browser kitty fastfetch neovim fcitx5
+yay -S google-chrome/firefox/zen-browser kitty fastfetch neovim fcitx5-chinese-addons
 ```
 
-8. others
+7. others
+
+```bash
+python -m venv ~/.python_venv
+```
 
 ```bash
 pip install hyprshade
