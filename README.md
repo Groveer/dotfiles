@@ -32,7 +32,7 @@ Some tools can also be installed from `cargo/pip/npm`.
 1. shell
 
 ```bash
-yay -S zsh eza rsync bat starship htop jq fastfetch neovim 
+yay -S zsh eza rsync bat starship htop jq fastfetch neovim kitty
 ```
 
 ```bash
@@ -54,7 +54,7 @@ sudo fc-cache -fv
 3. hypr
 
 ```bash
-yay -S dunst libnotify hyprland rofi-wayland waybar swww swaylock-effects grimblast-git cliphist pipewire-pulse swappy wf-recorder
+yay -S dunst libnotify hyprland rofi-wayland waybar swww swaylock-effects grimblast-git cliphist pipewire-pulse swappy wf-recorder swayidle
 ```
 
 4. dependency
@@ -72,7 +72,7 @@ yay -S nwg-look kvantum qt5ct qt6ct qt5-wayland qt6-wayland
 6. apps
 
 ```bash
-yay -S google-chrome/firefox/zen-browser kitty fcitx5
+yay -S google-chrome/firefox/zen-browser fcitx5
 ```
 
 7. others
