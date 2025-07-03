@@ -19,6 +19,9 @@ if [ -e ${HOME}/.nix-profile/etc/profile.d/nix.sh ] && [[ "$PATH" != *"nix"* ]];
     . ${HOME}/.nix-profile/etc/profile.d/nix.sh
 fi
 
+if [ -e ${HOME}/.local/lib/node_modules/bin ] && [[ "$PATH" != *"node_modules"* ]]; then
+    export PATH=${HOME}/.local/lib/node_modules/bin:$PATH
+fi
 if test -d "/opt/nvim-linux64/bin" && [[ "$PATH" != *"nvim"* ]]; then
     export PATH="$PATH:/opt/nvim-linux64/bin"
 fi
