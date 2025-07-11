@@ -78,7 +78,7 @@ yay -S google-chrome/firefox/zen-browser fcitx5
 7. others
 
 ```bash
-python -m venv ~/.python_venv
+python -m venv ~/.venv
 ```
 
 ```bash
@@ -126,26 +126,19 @@ It is easy to rm the symbol, just run `./config.sh uninstall`
 Install packages:
 
 ```bash
-yay -S python fnm
+yay -S python npm
 ```
 
 Init python:
 
 ```bash
-python -m venv ~/.python_venv
+python -m venv ~/.venv
 ```
 
 When after update python, can update venv:
 
 ```bash
-python -m venv --upgrade ~/.python_venv
-```
-
-Install nodejs:
-
-```bash
-fnm install <version/--latest>
-fnm default <version>
+python -m venv --upgrade ~/.venv
 ```
 
 Install rust:

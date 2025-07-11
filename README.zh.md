@@ -78,7 +78,7 @@ yay -S google-chrome/firefox/zen-browser fcitx5-chinese-addons
 7. others
 
 ```bash
-python -m venv ~/.python_venv
+python -m venv ~/.venv
 ```
 
 ```bash
@@ -126,26 +126,19 @@ git pull --rebase
 安装包：
 
 ```bash
-yay -S python fnm
+yay -S python npm
 ```
 
 初始化 python：
 
 ```bash
-python -m venv ~/.python_venv
+python -m venv ~/.venv
 ```
 
 Python 新版本升级时，可用命令升级：
 
 ```bash
-python -m venv --upgrade ~/.python_venv
-```
-
-安装 nodejs：
-
-```bash
-fnm install <version/--latest> --node-dist-mirror=https://npmmirror.com/mirrors/node
-fnm default <version>
+python -m venv --upgrade ~/.venv
 ```
 
 安装 rust：
