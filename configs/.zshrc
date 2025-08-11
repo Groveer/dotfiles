@@ -66,8 +66,8 @@ fi
 if [[ -d /usr/lib/qt6/bin ]] && [[ "$PATH" != *"qt6/bin"* ]]; then
     export PATH="/usr/lib/qt6/bin/:$PATH"
 fi
-if [[ -d ${HOME}/.python_venv ]] && [[ "$PATH" != *"python_venv"* ]]; then
-    source ${HOME}/.python_venv/bin/activate
+if [[ -d ${HOME}/.venv ]] && [[ "$PATH" != *"venv"* ]]; then
+    source ${HOME}/.venv/bin/activate
 fi
 
 if test -d /usr/local/texlive; then
