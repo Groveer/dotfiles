@@ -33,6 +33,7 @@ dict=(
     [alacritty]=alacritty
     [mpv]=mpv
     [kitty]=kitty
+    [ghostty]=ghostty
     [fastfetch]=fastfetch
     ["/.zsh"]=zsh
     [fish]=fish
