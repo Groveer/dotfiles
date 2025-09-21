@@ -73,7 +73,7 @@
         "states": {
             "c": 90, // critical
             "h": 60, // high
-            "m": 30, // medium
+            "m": 30 // medium
         },
         "interval": 30,
         "format": "󰾆 {used}GB",
@@ -166,35 +166,6 @@
             "on-scroll-down": "shift_down"
         }
     },
-    "hyprland/workspaces": {
-        "rotate": 0,
-        "all-outputs": true,
-        "active-only": false,
-        "on-click": "activate",
-        "disable-scroll": false,
-        "on-scroll-up": "hyprctl dispatch workspace -1",
-        "on-scroll-down": "hyprctl dispatch workspace +1",
-        "persistent-workspaces": {}
-    },
-    "hyprland/window": {
-        "format": "  {}",
-        "rotate": 0,
-        "separate-outputs": true,
-        "rewrite": {
-            "(.*)guo@Arch:(.*)": "$1  :$2",
-            "(.*) — Mozilla Firefox": "$1 󰈹",
-            "(.*)Mozilla Firefox": "$1 Firefox 󰈹",
-            "(.*) - Visual Studio Code": "$1 󰨞",
-            "(.*)Visual Studio Code": "$1 Code 󰨞",
-            "(.*) — Dolphin": "$1 󰉋",
-            "(.*)Spotify.*": "$1 Spotify 󰓇",
-            "(.*)Steam": "$1 Steam 󰓓",
-            "(.*) - Discord": "$1  ",
-            "(.*?)-\\s*YouTube(.*)": "$1󰗃",
-            "(.*?\\s)YouTube(.*)": "$1YouTube 󰗃"
-        },
-        "max-length": 50
-    },
     "backlight": {
         "device": "intel_backlight",
         "rotate": 0,
@@ -210,8 +181,8 @@
             "",
             ""
         ],
-        "on-scroll-up": "brightnesscontrol.sh i 1",
-        "on-scroll-down": "brightnesscontrol.sh d 1",
+        "on-scroll-up": "brightnessctl set 5%+",
+        "on-scroll-down": "brightnessctl set -5%",
         "min-length": 6
     },
     "network": {
@@ -229,11 +200,11 @@
     "pulseaudio": {
         "format": "{icon} {volume}",
         "rotate": 0,
-        "format-muted": "󰝟",
+        "format-muted": "",
         "on-click": "pavucontrol -t 3",
-        "on-click-middle": "volumecontrol.sh -o m",
-        "on-scroll-up": "volumecontrol.sh -o i",
-        "on-scroll-down": "volumecontrol.sh -o d",
+        "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
         "tooltip-format": "{icon} {desc} // {volume}%",
         "scroll-step": 5,
         "format-icons": {
@@ -256,9 +227,9 @@
         "format-source": "",
         "format-source-muted": "",
         "on-click": "pavucontrol -t 4",
-        "on-click-middle": "volumecontrol.sh -i m",
-        "on-scroll-up": "volumecontrol.sh -i i",
-        "on-scroll-down": "volumecontrol.sh -i d",
+        "on-click-middle": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
+        "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%",
         "tooltip-format": "{format_source} {source_desc} // {source_volume}%",
         "scroll-step": 5
     },
@@ -308,16 +279,6 @@
             "󰂂",
             "󰁹"
         ]
-    },
-    "custom/wallchange": {
-        "format": "{}",
-        "rotate": 0,
-        "exec": "echo ; echo 󰆊 switch wallpaper",
-        "on-click": "swwwallpaper.sh -n",
-        "on-click-right": "swwwallpaper.sh -p",
-        "on-click-middle": "sleep 0.1 && swwwallselect.sh",
-        "interval": 86400, // once every day
-        "tooltip": true
     },
     "custom/power": {
         "format": "{}",
