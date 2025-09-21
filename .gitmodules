@@ -1,0 +1,3 @@
+[submodule "configs/.config/nvim"]
+	path = configs/.config/nvim
+	url = https://github.com/Groveer/nvimdots.git

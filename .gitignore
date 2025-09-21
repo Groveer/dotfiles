@@ -1,0 +1,6 @@
+__pycache__/
+
+configs/.config/fcitx5/conf/cached_layouts
+configs/.config/fish/fish_variables
+configs/.config/hyde/themes/
+configs/.config/home-manager/flake.lock

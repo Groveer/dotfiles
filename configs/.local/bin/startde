@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# for nvidia, use hyprland-nvidia
+if [ "$(lsmod | grep -c nvidia)" -gt 1 ]; then
+	export LIBVA_DRIVER_NAME=nvidia
+	export GBM_BACKEND=nvidia-drm
+	export __GLX_VENDOR_LIBRARY_NAME=nvidia
+fi
+
+# for nouveau, use hyprland-nvidia
+if [ "$(lsmod | grep -c nouveau)" -gt 1 ]; then
+	export LIBVA_DRIVER_NAME=nouveau
+fi
+
+if [ $1 = "x" ]; then
+	exec startx
+fi
+
+if [ $1 = "w" ]; then
+
+	if [ -x /usr/bin/niri ]; then
+		exec niri
+	fi
+
+	if [ -x /usr/bin/sway ]; then
+		exec sway
+	fi
+fi

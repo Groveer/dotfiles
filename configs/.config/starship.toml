@@ -1,0 +1,95 @@
+# 根据 schema 提供自动补全
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# 在提示符之间插入空行
+add_newline = false
+command_timeout=8000
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character]                            # The name of the module we are configuring is "character"
+success_symbol = "[➜](bold green)"
+
+error_symbol = "[✗](bold red)"
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[git_branch]
+symbol = " "
+truncation_length = 4
+truncation_symbol = ""
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = "  "
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[ PICKING](bold red)"
+
+[git_status]
+conflicted = "  "
+ahead = "  "
+behind = "  "
+diverged = "  "
+untracked = "  "
+stashed = "  "
+modified = " 󱇧 "
+staged = '[++\($count\)](green)'
+renamed = " 󰑕 "
+deleted = " 󰛌 "
+
+[hostname]
+ssh_only = false
+format =  "@[$hostname](bold red) "
+trim_at = ".companyname.com"
+disabled = false
+
+[line_break]
+disabled = false
+
+[memory_usage]
+disabled = true
+threshold = -1
+symbol = " "
+style = "bold dimmed green"
+
+[time]
+disabled = true
+format = '[\[ $time \]]($style) '
+time_format = "%T"
+
+[username]
+style_user = "white bold"
+style_root = "black bold"
+format = "[$user]($style)"
+disabled = false
+show_always = true
+
+[directory]
+home_symbol = " "
+read_only = "  "
+style = "bold blue"
+truncation_length = 2
+truncation_symbol = "./"
+
+[python]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[c]
+symbol = " "
+
+[cmake]
+symbol = "󰔶 "

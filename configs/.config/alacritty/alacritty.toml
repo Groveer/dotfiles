@@ -1,0 +1,38 @@
+import = [
+  # uncomment the flavour you want below:
+  # "~/.config/alacritty/catppuccin-latte.toml"
+  # "~/.config/alacritty/catppuccin-frappe.toml"
+  # "~/.config/alacritty/catppuccin-macchiato.toml"
+  "~/.config/alacritty/catppuccin-mocha.toml",
+]
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 13
+
+[font.bold]
+family = "Maple Mono NF CN"
+style = "Bold"
+
+[font.bold_italic]
+family = "Maple Mono NF CN"
+style = "Bold Italic"
+
+[font.italic]
+family = "Maple Mono NF CN"
+style = "Italic"
+
+[font.normal]
+family = "Maple Mono NF CN"
+style = "Regular"
+
+[mouse]
+hide_when_typing = true
+
+[window]
+decorations = "none"
+dynamic_title = true
+opacity = 0.8
+startup_mode = "Maximized"
+title = "Alacritty"
