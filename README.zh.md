@@ -37,7 +37,7 @@ sudo fc-cache -fv
 3. niri
 
 ```bash
-yay -S niri xwayland xwayland-satellite dunst libnotify hyprland rofi waybar swww swaylock-effects pipewire-pulse wf-recorder swayidle
+yay -S niri xwayland xwayland-satellite dunst libnotify hyprland rofi waybar swaylock-effects pipewire-pulse wf-recorder swayidle swaybg
 ```
 
 4. dependency
@@ -49,7 +49,7 @@ yay -S polkit-gnome xdg-desktop-portal-gnome parallel qt5-imageformats brightnes
 5. theme
 
 ```bash
-yay -S nwg-look kvantum qt5ct qt6ct qt5-wayland qt6-wayland materia-gtk-theme
+yay -S nwg-look qt5-wayland qt6-wayland materia-gtk-theme xcursor-breeze
 ```
 
 6. apps

@@ -5,8 +5,16 @@ spawn-at-startup "waybar"
 spawn-at-startup "dunst"
 spawn-at-startup "swayidle" "-w"
 spawn-at-startup "fcitx5" "-d"
+spawn-sh-at-startup "sleep 1; swaybg -m stretch -i ~/Pictures/Desktop.png"
 
-prefer-no-csd
+output "DP-2" {
+    scale 2
+    transform "normal"
+    mode "3840x2160@160"
+    background-color "#303446"
+    variable-refresh-rate
+    focus-at-startup
+}
 
 environment {
     QT_QPA_PLATFORM "wayland;xcb"
@@ -22,13 +30,16 @@ environment {
     LC_ALL "zh_CN.UTF-8"
 }
 
+prefer-no-csd
+
 hotkey-overlay {
     skip-at-startup
 }
 
 cursor {
-    xcursor-theme "Adwaita"
-    xcursor-size 28
+    xcursor-theme "Breeze"
+    xcursor-size 20
+    hide-when-typing
     hide-after-inactive-ms 5000
 }
 
@@ -60,15 +71,6 @@ input {
     focus-follows-mouse max-scroll-amount="100%"
 }
 
-output "DP-2" {
-    scale 2
-    transform "normal"
-    mode "3840x2160@160"
-    background-color "#303446"
-    variable-refresh-rate
-    focus-at-startup
-}
-
 layout {
     gaps 7
     center-focused-column "never"
@@ -94,7 +96,7 @@ layout {
     }
 
     border {
-        width 3
+        width 1
         active-color "#cba6f7"
         inactive-color "#6c7086"
     }
@@ -108,20 +110,9 @@ switch-events {
 }
 
 window-rule {
-    geometry-corner-radius 8
+    geometry-corner-radius 5
     clip-to-geometry true
-    opacity 0.95
-}
-
-window-rule {
-    match app-id=r#"kitty$"# title="^tty-clock$"
-
-    open-floating true
-    default-column-width { proportion 0.3; }
-    default-window-height { proportion 0.3; }
-    default-floating-position x=7 y=7 relative-to="top-right"
-    open-focused false
-    opacity 0.97
+    opacity 0.9
 }
 
 window-rule {
