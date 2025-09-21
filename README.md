@@ -37,19 +37,19 @@ sudo fc-cache -fv
 3. niri
 
 ```bash
-yay -S niri xwayland xwayland-satellite dunst libnotify hyprland rofi waybar swaylock-effects pipewire-pulse wf-recorder swayidle swaybg
+yay -S niri xwayland-satellite dunst libnotify hyprland rofi waybar swaylock-effects pipewire-pulse wf-recorder swayidle swaybg
 ```
 
 4. dependency
 
 ```bash
-yay -S polkit-gnome xdg-desktop-portal-gnome parallel qt5-imageformats brightnessctl pavucontrol pamixer
+yay -S polkit-gnome xdg-desktop-portal-gnome parallel qt5-imageformats qt6-imageformats brightnessctl pavucontrol pamixer
 ```
 
 5. theme
 
 ```bash
-yay -S nwg-look kvantum qt5ct qt6ct qt5-wayland qt6-wayland materia-gtk-theme xcursor-breeze
+yay -S nwg-look qt5-wayland qt6-wayland sweet-gtk-theme-dark xcursor-breeze beautyline
 ```
 
 6. apps
@@ -76,7 +76,7 @@ pip install pyamdgpuinfo
 2. Run `./config.sh install`, it will initialize env.
 3. Run `chsh -s /bin/zsh`.
 4. Relogin user and run `startde w`.
-6. If there is a conflicting file, delete it manually. run `./config.sh install`
+5. If there is a conflicting file, delete it manually. run `./config.sh install`
 
 > [!IMPORTANT]
 > `./config.sh install`**will rm your `~/.bashrc`, please backup your `~/.bashrc` first!**
