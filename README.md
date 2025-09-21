@@ -4,23 +4,6 @@
 
 English | [中文](README.zh.md)
 
-## Themes
-
-<div align="center">
-
-![hyde_banner](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/hyde_banner.png)
-
-<br>
-
-https://github.com/prasanthrangan/hyprdots/assets/106020512/7f8fadc8-e293-4482-a851-e9c6464f5265
-
-<br></div>
-
-<div align="right">
-  <br>
-  <a href="#top"><kbd> <br>  <br> </kbd></a>
-</div>
-
 **You can have the same user experience as me in Archlinux**
 
 ## Desktop Environment（Native Wayland）
@@ -32,7 +15,7 @@ Some tools can also be installed from `cargo/pip/npm`.
 1. shell
 
 ```bash
-yay -S zsh eza rsync bat starship htop jq fastfetch neovim kitty
+yay -S zsh eza rsync bat starship htop jq fastfetch neovim ghostty
 ```
 
 ```bash
@@ -51,22 +34,22 @@ sudo cp -r MapleFont /usr/share/fonts
 sudo fc-cache -fv
 ```
 
-3. hypr
+3. niri
 
 ```bash
-yay -S dunst libnotify hyprland rofi-wayland waybar swww swaylock-effects grimblast-git cliphist pipewire-pulse swappy wf-recorder swayidle
+yay -S niri xwayland xwayland-satellite dunst libnotify hyprland rofi waybar swww swaylock-effects pipewire-pulse wf-recorder swayidle
 ```
 
 4. dependency
 
 ```bash
-yay -S polkit-gnome xdg-desktop-portal-hyprland parallel imagemagick qt5-imageformats brightnessctl pavucontrol pamixer pacman-contrib
+yay -S polkit-gnome xdg-desktop-portal-gnome parallel qt5-imageformats brightnessctl pavucontrol pamixer
 ```
 
 5. theme
 
 ```bash
-yay -S nwg-look kvantum qt5ct qt6ct qt5-wayland qt6-wayland
+yay -S nwg-look kvantum qt5ct qt6ct qt5-wayland qt6-wayland materia-gtk-theme
 ```
 
 6. apps
@@ -81,10 +64,6 @@ yay -S google-chrome/firefox/zen-browser fcitx5
 python -m venv ~/.venv
 ```
 
-```bash
-pip install hyprshade
-```
-
 If you use amdgpu, can install:
 
 ```bash
@@ -97,11 +76,10 @@ pip install pyamdgpuinfo
 2. Run `./config.sh install`, it will initialize env.
 3. Run `chsh -s /bin/zsh`.
 4. Relogin user and run `startde w`.
-5. Run `./init.sh`, it will patch sources.
 6. If there is a conflicting file, delete it manually. run `./config.sh install`
 
 > [!IMPORTANT]
-> `./init.sh` will excuable `./config.sh install`. **It will rm your `~/.bashrc`, please backup your `~/.bashrc` first!**
+> `./config.sh install`**will rm your `~/.bashrc`, please backup your `~/.bashrc` first!**
 
 ## Run
 

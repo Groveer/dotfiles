@@ -4,23 +4,6 @@
 
 [English](README.md) | 中文
 
-## Themes
-
-<div align="center">
-
-![hyde_banner](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/hyde_banner.png)
-
-<br>
-
-https://github.com/prasanthrangan/hyprdots/assets/106020512/7f8fadc8-e293-4482-a851-e9c6464f5265
-
-<br></div>
-
-<div align="right">
-  <br>
-  <a href="#top"><kbd> <br>  <br> </kbd></a>
-</div>
-
 **在 Archlinux 上可以拥有与本人一致的体验**
 
 ## Desktop Environment（Native Wayland）
@@ -32,7 +15,7 @@ https://github.com/prasanthrangan/hyprdots/assets/106020512/7f8fadc8-e293-4482-a
 1. shell
 
 ```bash
-yay -S zsh eza rsync bat starship htop jq fastfetch kitty
+yay -S zsh eza rsync bat starship htop jq fastfetch neovim ghostty
 ```
 
 ```bash
@@ -51,22 +34,22 @@ sudo cp -r MapleFont /usr/share/fonts
 sudo fc-cache -fv
 ```
 
-3. hypr
+3. niri
 
 ```bash
-yay -S dunst libnotify hyprland rofi-wayland waybar swww swaylock-effects grimblast-git cliphist pipewire-pulse swappy wf-recorder swayidle
+yay -S niri xwayland xwayland-satellite dunst libnotify hyprland rofi waybar swww swaylock-effects pipewire-pulse wf-recorder swayidle
 ```
 
 4. dependency
 
 ```bash
-yay -S polkit-gnome xdg-desktop-portal-hyprland parallel imagemagick qt5-imageformats brightnessctl pavucontrol pamixer pacman-contrib
+yay -S polkit-gnome xdg-desktop-portal-gnome parallel qt5-imageformats brightnessctl pavucontrol pamixer
 ```
 
 5. theme
 
 ```bash
-yay -S nwg-look kvantum qt5ct qt6ct qt5-wayland qt6-wayland
+yay -S nwg-look kvantum qt5ct qt6ct qt5-wayland qt6-wayland materia-gtk-theme
 ```
 
 6. apps
@@ -81,10 +64,6 @@ yay -S google-chrome/firefox/zen-browser fcitx5-chinese-addons
 python -m venv ~/.venv
 ```
 
-```bash
-pip install hyprshade
-```
-
 如果使用amdgpu，可以安装：
 
 ```bash
@@ -97,11 +76,10 @@ pip install pyamdgpuinfo
 2. 运行 `./config.sh install`, 它会初始化环境变量，并且创建软链。
 3. 运行 `chsh -s /bin/zsh`, 切换终端.
 4. 重新登录并且运行 `startde w`.
-5. 运行`./init.sh`脚本，它会初始化环境变量并且释放资源。
 6. 如果在运行过程中发现在家目录有冲突文件，请手动删除它，然后运行：`./config.sh install`。
 
 > [!IMPORTANT]
-> 运行`./init.sh`脚本会自动运行`./config.sh install`，该脚本会删除您的`~/.bashrc`文件，请在运行前备份好它！
+> `./config.sh install`会删除您的`~/.bashrc`文件，请在运行前备份好它！
 
 ## 运行
 
