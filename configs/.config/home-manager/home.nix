@@ -16,9 +16,12 @@
     neovim
     lua
     starship
-    vscode
-    code-cursor
+    wl-clipboard
   ];
+
+nixpkgs.overlays = [
+  inputs.neovim-nightly-overlay.overlays.default
+];
 
   fonts.fontconfig.enable = true; # Allow fontconfig to discover fonts in home.packages
 

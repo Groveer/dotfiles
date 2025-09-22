@@ -15,6 +15,14 @@ output "DP-2" {
     focus-at-startup
 }
 
+output "HDMI-A-1" {
+    scale 1.25
+    transform "normal"
+    mode "1920x1080@60"
+    background-color "#303446"
+    focus-at-startup
+}
+
 environment {
     QT_QPA_PLATFORM "wayland;xcb"
     QT_QPA_PLATFORMTHEME "qt6ct;qt5ct"

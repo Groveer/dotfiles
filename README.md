@@ -37,7 +37,7 @@ sudo fc-cache -fv
 3. niri
 
 ```bash
-yay -S niri xwayland-satellite dunst libnotify hyprland rofi waybar swaylock-effects pipewire-pulse wf-recorder swayidle swaybg
+yay -S niri xwayland-satellite dunst libnotify rofi waybar swaylock-effects pipewire-pulse wf-recorder swayidle swaybg wl-clipboard
 ```
 
 4. dependency
