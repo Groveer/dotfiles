@@ -56,6 +56,9 @@ fi
 if command -v bat >/dev/null; then
     alias cat="bat -p"
 fi
+if command -v paru >/dev/null; then
+    alias pu="paru"
+fi
 
 if command -v starship >/dev/null; then
     eval "$(starship init zsh)"
