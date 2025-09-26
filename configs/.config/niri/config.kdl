@@ -154,7 +154,7 @@ window-rule {
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+Return { spawn "ghostty"; }
+    Mod+Return { spawn "kitty"; }
     Mod+E { spawn "nautilus"; }
     Mod+D { spawn "rofi" "-show" "drun" "-config" "~/.config/rofi/quickapps.rasi"; }
 
