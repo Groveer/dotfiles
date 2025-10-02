@@ -15,7 +15,7 @@ Some tools can also be installed from `cargo/pip/npm`.
 1. shell
 
 ```bash
-yay -S zsh eza rsync bat starship htop jq fastfetch neovim ghostty
+yay -S zsh eza rsync bat starship htop jq fastfetch neovim kitty
 ```
 
 ```bash
@@ -43,7 +43,7 @@ yay -S niri xwayland-satellite dunst libnotify rofi waybar swaylock-effects pipe
 4. dependency
 
 ```bash
-yay -S polkit-gnome xdg-desktop-portal-gnome parallel qt5-imageformats qt6-imageformats brightnessctl pavucontrol pamixer
+yay -S polkit-gnome xdg-desktop-portal-gtk parallel qt5-imageformats qt6-imageformats brightnessctl pavucontrol pamixer
 ```
 
 5. theme
