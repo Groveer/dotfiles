@@ -19,7 +19,7 @@ fi
 if [ $1 = "w" ]; then
 
 	if [ -x /usr/bin/niri ]; then
-		exec niri
+		exec niri-session
 	fi
 
 	if [ -x /usr/bin/sway ]; then
