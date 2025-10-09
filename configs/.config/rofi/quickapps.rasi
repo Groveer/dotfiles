@@ -16,8 +16,8 @@ configuration {
 // Main //
 window {
     border-radius:              0.5em;
-    height:                     35em;
-    width:                      56em;
+    height:                     25em;
+    width:                      40em;
     transparency:               "real";
     fullscreen:                 false;
     enabled:                    true;
@@ -42,7 +42,7 @@ mainbox {
 inputbar {
     enabled:                    true;
     spacing:                    0em;
-    padding:                    5em;
+    padding:                    1em;
     children:                   [ "entry" ];
     background-color:           transparent;
 }
@@ -94,7 +94,7 @@ mode-switcher {
 }
 button {
     cursor:                     pointer;
-    border-radius:              3em;
+    border-radius:              1em;
     background-color:           @main-bg;
     text-color:                 @main-fg;
 }
@@ -119,7 +119,7 @@ element selected.normal {
     text-color:                 @select-fg;
 }
 element-icon {
-    size:                       3em;
+    size:                       1em;
     cursor:                     inherit;
     background-color:           transparent;
     text-color:                 inherit;
