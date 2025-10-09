@@ -6,7 +6,7 @@ configuration {
     display-run:                 " ";
     display-filebrowser:         " ";
     display-window:              " ";
-    drun-display-format:         "{name}";
+    drun-display-format:         "&#x20;{name}";
     window-format:               "{w}{t}";
     font:                        "Maple Mono NF CN 12";
 }
