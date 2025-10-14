@@ -1,9 +1,22 @@
-{ inputs, config, pkgs, ... }:
+{ inputs, config, pkgs, lib, ... }:
 
+let
+  currentUser = builtins.getEnv "USER";
+  currentHome = builtins.getEnv "HOME";
+in
 {
   # Home Manager needs a bit of information about you and the paths it should manage.
-  home.username = "guo";
-  home.homeDirectory = "/home/guo";
+  home = {
+    username =
+      if currentUser != ""
+      then lib.mkForce currentUser
+      else throw "$USER not set";
+
+    homeDirectory =
+      if currentHome != ""
+      then lib.mkForce currentHome
+      else throw "$HOME not set";
+  };
 
   home.packages = with pkgs; [
     htop
@@ -17,6 +30,9 @@
     lua
     starship
     wl-clipboard
+    bat
+    eza
+    jq
   ];
 
 nixpkgs.overlays = [

@@ -97,6 +97,35 @@ git pull --rebase
 
 It is easy to rm the symbol, just run `./config.sh uninstall`
 
+## Nix & home-manager
+
+1. install nix：
+
+```bash
+sh <(curl -L https://nixos.org/nix/install) --no-daemon
+```
+
+2. update config：
+
+```bash
+./config.sh install
+```
+
+3. install home-manager：
+
+```bash
+nix flake update
+nix-shell -p home-manager
+cd ~/.config/home-manager
+home-manager switch --flake . --impure
+```
+
+4. clean disk space:
+
+```bash
+nix-collect-garbage -d
+```
+
 ## Editor/IDE (Neovim)
 
 ### Developer Environment (Neovim config dependeies)

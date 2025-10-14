@@ -97,6 +97,35 @@ git pull --rebase
 
 非常简单的删除初始化过程中创建的符号，只需要运行：`./config.sh uninstall`。
 
+## Nix & home-manager
+
+1. 安装 nix：
+
+```bash
+sh <(curl -L https://nixos.org/nix/install) --no-daemon
+```
+
+2. 更新软链：
+
+```bash
+./config.sh install
+```
+
+3. 安装 home-manager：
+
+```bash
+nix flake update
+nix-shell -p home-manager
+cd ~/.config/home-manager
+home-manager switch --flake . --impure
+```
+
+4. 清理空间：
+
+```bash
+nix-collect-garbage -d
+```
+
 ## 编辑器 (Neovim)
 
 ### 开发环境 (Neovim 配置依赖)
