@@ -32,6 +32,10 @@ if command -v rsync >/dev/null; then
     alias cp="rsync -azvP"
 fi
 
+if command -v xdg-open >/dev/null; then
+    alias o="xdg-open"
+fi
+
 if command -v vim >/dev/null; then
     export EDITOR=vim
 fi
