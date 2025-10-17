@@ -83,6 +83,11 @@ input {
 layout {
     gaps 7
     center-focused-column "never"
+    always-center-single-column
+    default-column-display "tabbed"
+    tab-indicator {
+        hide-when-single-tab
+    }
 
     preset-column-widths {
         proportion 0.25
@@ -103,11 +108,13 @@ layout {
     focus-ring {
         off
     }
-
     border {
-        width 1
-        active-color "#cba6f7"
-        inactive-color "#6c7086"
+        width 1.5
+        active-gradient from="#ea76cb" to="#dc8a78" angle=45 relative-to="workspace-view"
+        inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+    }
+    shadow {
+        on
     }
 }
 
@@ -121,36 +128,15 @@ switch-events {
 window-rule {
     geometry-corner-radius 5
     clip-to-geometry true
-    opacity 0.9
+    opacity 1.0
 }
 
 window-rule {
-    match app-id=r#"zen$"# title="^Picture-in-Picture$"
-    match app-id=r#"zen$"# title="^Library$"
     match app-id=r#"mpv$"#
-    match app-id=r#"libresprite$"#
-    match app-id=r#"waypaper$"#
-    match app-id=r#"Audacity$"#
+    match app-id=r#"blueman-manager$"#
+    match app-id=r#"org.pulseaudio.pavucontrol$"#
 
     open-floating true
-    opacity 1.0
-}
-
-window-rule {
-    match app-id=r#"zen$"#
-    match app-id=r#"firefox$"#
-    match app-id=r#"chromium$"#
-    match app-id=r#"vivaldi-stable$"#
-    match app-id=r#"virt-manager$"#
-    match app-id=r#"^com\.obsproject\.Studio$"#
-
-    opacity 1.0
-}
-
-window-rule {
-    match app-id=r#"^com\.obsproject\.Studio$"#
-
-    min-width 876
 }
 
 binds {
