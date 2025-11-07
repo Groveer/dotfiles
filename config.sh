@@ -30,6 +30,7 @@ dict=(
     [ghostty]=ghostty
     [fastfetch]=fastfetch
     ["/.zsh"]=zsh
+    ["/.ssh"]=ssh
     [fish]=fish
     [starship]=starship
     [gdb]=gdb
