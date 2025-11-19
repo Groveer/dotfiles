@@ -121,6 +121,30 @@ zinit wait lucid light-mode for \
       zsh-users/zsh-completions
 #===================== Base Configuration End =======================
 
+# unlock bitwarden and export session token
+ubw() {
+    bw sync
+    # set environment variables
+    export BW_SESSION=$(bw unlock --raw)
+    keys=(
+        GEMINI_API_KEY
+        TAVILY_API_KEY
+        UT_KEY
+    )
+    for key in "${keys[@]}"; do
+        export $key=$(bw get notes $key --session $BW_SESSION)
+    done
+    # get ssh key
+    keys=(
+        ssh_git
+        ssh_home
+    )
+    eval "$(ssh-agent -s)"
+    for key in "${keys[@]}"; do
+        bw get item $key --session $BW_SESSION | jq -r .sshKey.privateKey | ssh-add -
+    done
+}
+
 #===================== User Configuration Start =====================
 
 if command -v distcc >/dev/null && [[ "$PATH" != *"distcc"* ]]; then
