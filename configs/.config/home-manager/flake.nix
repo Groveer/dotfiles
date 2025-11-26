@@ -18,9 +18,10 @@
     flake-utils.lib.eachDefaultSystemPassThrough (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
+        currentUser = builtins.getEnv "USER";
       in {
         # 'guo' is the username of the user whose home directory is being managed.
-        homeConfigurations.guo = home-manager.lib.homeManagerConfiguration {
+        homeConfigurations.${currentUser} = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
 
           # Specify your home configuration modules here, for example,

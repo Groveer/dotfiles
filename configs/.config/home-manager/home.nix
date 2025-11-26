@@ -22,7 +22,6 @@ in
     htop
     ripgrep
     nix-index
-    nix-update
     python3
     nodejs
     git
