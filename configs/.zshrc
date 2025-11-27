@@ -121,6 +121,21 @@ zinit wait lucid light-mode for \
       zsh-users/zsh-completions
 #===================== Base Configuration End =======================
 
+start_ssh_agent() {
+    local agent_pid sock_file sock_dir
+    agent_pid=$(pgrep -u "$USER" ssh-agent 2>/dev/null)
+    if [[ -n "$agent_pid" ]]; then
+        sock_file=$(find ~/.ssh/agent/ -type s 2>/dev/null | head -1)
+        if [[ -n "$sock_file" && -S "$sock_file" ]]; then
+            SSH_AGENT_PID=$agent_pid
+            SSH_AUTH_SOCK=$sock_file
+            export SSH_AGENT_PID SSH_AUTH_SOCK
+            return
+        fi
+    fi
+    eval "$(ssh-agent -s)"
+}
+
 # unlock bitwarden and export session token
 ubw() {
     bw sync
@@ -139,7 +154,7 @@ ubw() {
         ssh_git
         ssh_home
     )
-    eval "$(ssh-agent -s)"
+    start_ssh_agent
     for key in "${keys[@]}"; do
         bw get item $key --session $BW_SESSION | jq -r .sshKey.privateKey | ssh-add -
     done
