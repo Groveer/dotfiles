@@ -125,8 +125,19 @@ start_ssh_agent() {
     local agent_pid sock_file sock_dir
     agent_pid=$(pgrep -u "$USER" ssh-agent 2>/dev/null)
     if [[ -n "$agent_pid" ]]; then
-        sock_file=$(find ~/.ssh/agent/ -type s 2>/dev/null | head -1)
-        if [[ -n "$sock_file" && -S "$sock_file" ]]; then
+        RUNDIR="${XDG_RUNTIME_DIR:-/run/user/$UID}"
+        for dir in \
+            "$HOME/.ssh/agent" \
+            "$RUNDIR/gnupg" \
+            "$RUNDIR/keyring"
+        do
+            [[ -d $dir ]] || continue
+            sock_file=$(find "$dir" -type s 2>/dev/null | head -n1)
+            [[ -n $sock_file ]] && break
+        done
+
+        echo "SSH_AUTH_SOCK: $sock_file"
+        if [[ -S "$sock_file" ]]; then
             SSH_AGENT_PID=$agent_pid
             SSH_AUTH_SOCK=$sock_file
             export SSH_AGENT_PID SSH_AUTH_SOCK
@@ -138,7 +149,6 @@ start_ssh_agent() {
 
 # unlock bitwarden and export session token
 ubw() {
-    bw sync
     # set environment variables
     export BW_SESSION=$(bw unlock --raw)
     keys=(
