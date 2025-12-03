@@ -4,6 +4,7 @@
 # 在提示符之间插入空行
 add_newline = false
 command_timeout=8000
+scan_timeout=8000
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character]                            # The name of the module we are configuring is "character"
