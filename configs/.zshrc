@@ -158,6 +158,7 @@ ubw() {
     )
     for key in "${keys[@]}"; do
         export $key=$(bw get notes $key --session $BW_SESSION)
+        echo "$key=${(P)key}"  # 使用参数扩展 ${(P)key} 读取变量名为$key的变量的值
     done
     # get ssh key
     keys=(
