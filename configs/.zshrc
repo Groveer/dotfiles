@@ -119,6 +119,10 @@ zinit wait lucid light-mode for \
       zsh-users/zsh-autosuggestions \
   blockf atpull'zinit creinstall -q .' \
       zsh-users/zsh-completions
+
+zinit wait lucid for \
+  casonadams/bitwarden.zsh
+
 #===================== Base Configuration End =======================
 
 start_ssh_agent() {
