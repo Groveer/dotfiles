@@ -26,6 +26,7 @@ in
     nodejs
     git
     neovim
+    tree-sitter
     lua
     starship
     wl-clipboard
