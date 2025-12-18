@@ -142,13 +142,11 @@ start_ssh_agent() {
 
         echo "SSH_AUTH_SOCK: $sock_file"
         if [[ -S "$sock_file" ]]; then
-            SSH_AGENT_PID=$agent_pid
-            SSH_AUTH_SOCK=$sock_file
-            export SSH_AGENT_PID SSH_AUTH_SOCK
             return
         fi
     fi
     eval "$(ssh-agent -s)"
+    systemctl --user set-environment "SSH_AGENT_PID=$SSH_AGENT_PID" "SSH_AUTH_SOCK=$SSH_AUTH_SOCK"
 }
 
 # unlock bitwarden and export session token
@@ -161,7 +159,7 @@ ubw() {
         UT_KEY
     )
     for key in "${keys[@]}"; do
-        export $key=$(bw get notes $key --session $BW_SESSION)
+        systemctl --user set-environment "$key=$(bw get notes $key --session $BW_SESSION)"
         echo "$key=${(P)key}"  # 使用参数扩展 ${(P)key} 读取变量名为$key的变量的值
     done
     # get ssh key
@@ -174,6 +172,9 @@ ubw() {
         bw get item $key --session $BW_SESSION | jq -r .sshKey.privateKey | ssh-add -
     done
 }
+
+# import systemd user environment variables
+eval "$(systemctl --user show-environment | sed -E 's/([^=]+)=(.*)/export \1=\${\1:="\2"}/')"
 
 #===================== User Configuration Start =====================
 
