@@ -33,6 +33,7 @@ in
     bat
     eza
     jq
+    bitwarden-cli
   ];
 
 nixpkgs.overlays = [
