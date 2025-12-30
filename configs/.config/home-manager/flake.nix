@@ -8,13 +8,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     flake-utils.url = "github:numtide/flake-utils";
-    neovim-nightly-overlay = {
-      url = "github:nix-community/neovim-nightly-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
   };
 
-  outputs = { self, flake-utils, nixpkgs, home-manager, neovim-nightly-overlay, ... }@inputs:
+  outputs = { self, flake-utils, nixpkgs, home-manager, neovim-nightly, ... }@inputs:
     flake-utils.lib.eachDefaultSystemPassThrough (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};

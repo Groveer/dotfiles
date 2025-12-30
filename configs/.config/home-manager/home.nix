@@ -25,7 +25,6 @@ in
     python3
     nodejs
     git
-    neovim
     tree-sitter
     lua
     starship
@@ -34,11 +33,8 @@ in
     eza
     jq
     bitwarden-cli
+    inputs.neovim-nightly.packages.${pkgs.system}.default
   ];
-
-nixpkgs.overlays = [
-  inputs.neovim-nightly-overlay.overlays.default
-];
 
   fonts.fontconfig.enable = true; # Allow fontconfig to discover fonts in home.packages
 
