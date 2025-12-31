@@ -171,11 +171,15 @@ ubw() {
     for key in "${keys[@]}"; do
         bw get item $key --session $BW_SESSION | jq -r .sshKey.privateKey | ssh-add -
     done
+    import_env
 }
 
-# import systemd user environment variables
-eval "$(systemctl --user show-environment | sed -E 's/([^=]+)=(.*)/export \1=\${\1:="\2"}/')"
+import_env() {
+    # import systemd user environment variables
+    eval "$(systemctl --user show-environment | sed -E 's/([^=]+)=(.*)/export \1=\${\1:="\2"}/')"
+}
 
+import_env
 #===================== User Configuration Start =====================
 
 if command -v distcc >/dev/null && [[ "$PATH" != *"distcc"* ]]; then
