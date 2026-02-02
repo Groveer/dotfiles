@@ -175,12 +175,19 @@ ubw() {
 }
 
 import_env() {
-    # import systemd user environment variables
-    eval "$(systemctl --user show-environment | sed -E 's/([^=]+)=(.*)/export \1=\${\1:="\2"}/')"
+    if command -v systemctl >/dev/null; then
+        # import systemd user environment variables
+        eval "$(systemctl --user show-environment | sed -E 's/([^=]+)=(.*)/export \1=\${\1:="\2"}/')"
+    fi
 }
 
 import_env
 #===================== User Configuration Start =====================
+
+export MASON_BIN_PATH="${HOME}/.local/share/nvim/mason/bin"
+if [[ -d "${MASON_BIN_PATH}" ]] && [[ "$PATH" != *"mason/bin"* ]]; then
+    export PATH="${MASON_BIN_PATH}:${PATH}"
+fi
 
 if command -v distcc >/dev/null && [[ "$PATH" != *"distcc"* ]]; then
     export PATH="/usr/lib/distcc/bin/:$PATH"
