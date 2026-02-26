@@ -1,7 +1,7 @@
 [source.crates-io]
-registry = "https://github.com/rust-lang/crates.io-index"
+registry = "sparse+https://index.crates.io/"
 # 指定镜像
-replace-with = 'rsproxy' # 如：tuna、sjtu、ustc，或者 rustcc
+replace-with = 'ustc' # 如：tuna、sjtu、ustc，或者 rustcc
 
 # 注：以下源配置一个即可，无需全部
 # 目前 sjtu 相对稳定些
@@ -21,6 +21,14 @@ registry = "sparse+https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index/"
 # 清华大学
 [source.tuna]
 registry = "sparse+https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index/"
+
+# 浙江大学
+[source.zju]
+registry = "sparse+https://mirrors.zju.edu.cn/crates.io-index/"
+
+# 中国教育和科研计算机网
+[source.cernet]
+registry = "sparse+https://mirrors.cernet.edu.cn/crates.io-index/"
 
 # rustcc社区
 [source.rustcc]
