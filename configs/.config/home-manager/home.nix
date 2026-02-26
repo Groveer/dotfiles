@@ -33,6 +33,8 @@ in
     eza
     jq
     bitwarden-cli
+    uv
+    bear
     inputs.neovim-nightly.packages.${pkgs.system}.default
   ];
 
