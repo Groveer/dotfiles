@@ -113,15 +113,15 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 zinit wait lucid light-mode for \
-  atinit"zicompinit; zicdreplay" \
-      zdharma-continuum/fast-syntax-highlighting \
-  atload"_zsh_autosuggest_start" \
-      zsh-users/zsh-autosuggestions \
-  blockf atpull'zinit creinstall -q .' \
-      zsh-users/zsh-completions
+    atinit"zicompinit; zicdreplay" \
+    zdharma-continuum/fast-syntax-highlighting \
+    atload"_zsh_autosuggest_start" \
+    zsh-users/zsh-autosuggestions \
+    blockf atpull'zinit creinstall -q .' \
+    zsh-users/zsh-completions
 
 zinit wait lucid for \
-  casonadams/bitwarden.zsh
+    casonadams/bitwarden.zsh
 
 #===================== Base Configuration End =======================
 
@@ -158,8 +158,13 @@ ubw() {
         TAVILY_API_KEY
     )
     for key in "${keys[@]}"; do
-        systemctl --user set-environment "$key=$(bw get notes $key --session $BW_SESSION)"
-        echo "$key=${(P)key}"  # 使用参数扩展 ${(P)key} 读取变量名为$key的变量的值
+        value=$(bw get notes $key --session $BW_SESSION)
+        if command -v systemctl >/dev/null; then
+            systemctl --user set-environment "$key=$value"
+        else
+            export "$key=$value"
+        fi
+        echo "$key=$value"
     done
     # get ssh key
     keys=(
