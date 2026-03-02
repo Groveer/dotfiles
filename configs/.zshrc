@@ -154,10 +154,8 @@ ubw() {
     # set environment variables
     export BW_SESSION=$(bw unlock --raw)
     keys=(
-        GEMINI_API_KEY
-        NVIDIA_API_KEY
+        GROVEER_API_KEY
         TAVILY_API_KEY
-        UT_API_KEY
     )
     for key in "${keys[@]}"; do
         systemctl --user set-environment "$key=$(bw get notes $key --session $BW_SESSION)"
