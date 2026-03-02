@@ -17,7 +17,7 @@ output "DP-2" {
 output "HDMI-A-1" {
     scale 1.25
     transform "normal"
-    mode "1920x1080@60"
+    mode "1920x1080@120"
     background-color "#303446"
     focus-at-startup
 }
@@ -33,6 +33,7 @@ environment {
     QT_IM_MODULE "fcitx"
     SDL_IM_MODULE "fcitx"
     GLFW_IM_MODULE "fcitx"
+    XMODIFIERS "@im=fcitx"
 
     LANGUAGE "zh_CN.UTF-8"
     LANG "zh_CN.UTF-8"
@@ -135,6 +136,9 @@ window-rule {
     match app-id=r#"mpv$"#
     match app-id=r#"blueman-manager$"#
     match app-id=r#"org.pulseaudio.pavucontrol$"#
+
+    // 企业微信
+    match app-id=r#"com.qq.weixin.work.deepin$"#
 
     open-floating true
 }
