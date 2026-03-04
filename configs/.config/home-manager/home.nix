@@ -35,6 +35,8 @@ in
     bitwarden-cli
     uv
     bear
+    fd
+    gh
     inputs.neovim-nightly.packages.${pkgs.system}.default
   ];
 
