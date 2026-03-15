@@ -15,7 +15,7 @@
 1. shell
 
 ```bash
-yay -S zsh eza rsync bat starship htop jq fastfetch neovim kitty
+yay -S zsh fastfetch neovim kitty/ghostty
 ```
 
 ```bash
@@ -24,7 +24,13 @@ chsh -s /bin/zsh
 
 2. fonts
 
-Download fonts from here: [MapleMono-NF-CN.zip](https://github.com/subframe7536/Maple-font/releases)
+```bash
+yay -S ttf-maplemono-nf-cn
+```
+
+或者
+
+从这里下载 [MapleMono-NF-CN.zip](https://github.com/subframe7536/Maple-font/releases)
 
 ```bash
 wget https://github.com/subframe7536/maple-font/releases/latest/download/MapleMono-NF-CN-unhinted.zip   # screen > 1080p
@@ -49,7 +55,7 @@ yay -S polkit-gnome xdg-desktop-portal-gnome parallel qt5-imageformats qt6-image
 5. theme
 
 ```bash
-yay -S nwg-look qt5-wayland qt6-wayland sweet-gtk-theme-dark xcursor-breeze beautyline
+yay -S nwg-look qt5-wayland qt6-wayland sweet-gtk-theme-dark beautyline
 ```
 
 6. apps

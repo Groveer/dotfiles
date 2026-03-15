@@ -15,7 +15,7 @@ Some tools can also be installed from `cargo/pip/npm`.
 1. shell
 
 ```bash
-yay -S zsh eza rsync bat starship htop jq fastfetch neovim kitty
+yay -S zsh fastfetch neovim kitty/ghotty
 ```
 
 ```bash
@@ -23,6 +23,12 @@ chsh -s /bin/zsh
 ```
 
 2. fonts
+
+```bash
+yay -S ttf-maplemono-nf-cn
+```
+
+or
 
 Download fonts from here: [MapleMono-NF-CN.zip](https://github.com/subframe7536/Maple-font/releases)
 
@@ -49,7 +55,7 @@ yay -S polkit-gnome xdg-desktop-portal-gnome parallel qt5-imageformats qt6-image
 5. theme
 
 ```bash
-yay -S nwg-look qt5-wayland qt6-wayland sweet-gtk-theme-dark xcursor-breeze beautyline
+yay -S nwg-look qt5-wayland qt6-wayland sweet-gtk-theme-dark beautyline
 ```
 
 6. apps

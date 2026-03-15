@@ -37,6 +37,7 @@ in
     bear
     fd
     gh
+    rsync
     inputs.neovim-nightly.packages.${pkgs.system}.default
   ];
 

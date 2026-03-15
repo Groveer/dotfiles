@@ -5,8 +5,8 @@ spawn-at-startup "swayidle" "-w"
 spawn-at-startup "fcitx5" "-d"
 spawn-sh-at-startup "sleep 1; swaybg -m stretch -i ~/Pictures/Desktop.png"
 
-output "DP-2" {
-    scale 2
+output "DP-4" {
+    scale 1.75
     transform "normal"
     mode "3840x2160@160"
     background-color "#303446"
@@ -47,8 +47,8 @@ hotkey-overlay {
 }
 
 cursor {
-    xcursor-theme "Breeze"
-    xcursor-size 20
+    xcursor-theme "Adwaita"
+    xcursor-size 24
     hide-when-typing
     hide-after-inactive-ms 5000
 }
@@ -146,7 +146,7 @@ window-rule {
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+Return { spawn "kitty"; }
+    Mod+Return { spawn "ghostty"; }
     Mod+E { spawn "nautilus"; }
     Mod+D {
         spawn "bash" "-c" "pgrep rofi && pkill rofi || rofi -show drun -config ~/.config/rofi/quickapps.rasi";
