@@ -19,6 +19,7 @@ dict=(
     ["nwg-look"]=nwg-look
     [themes]=nwg-look
     [xsettingsd]=nwg-look
+    [gtk]=nwg-look
     [swayidle]=swayidle
     # tools
     [nvim]=nvim

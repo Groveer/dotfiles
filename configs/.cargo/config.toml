@@ -1,7 +1,7 @@
 [source.crates-io]
 registry = "sparse+https://index.crates.io/"
 # 指定镜像
-replace-with = 'ustc' # 如：tuna、sjtu、ustc，或者 rustcc
+replace-with = 'rsproxy' # 如：tuna、sjtu、ustc，或者 rustcc
 
 # 注：以下源配置一个即可，无需全部
 # 目前 sjtu 相对稳定些

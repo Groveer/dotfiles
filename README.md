@@ -55,7 +55,7 @@ yay -S polkit-gnome xdg-desktop-portal-gnome parallel qt5-imageformats qt6-image
 5. theme
 
 ```bash
-yay -S nwg-look qt5-wayland qt6-wayland sweet-gtk-theme-dark beautyline
+yay -S nwg-look qt5-wayland qt6-wayland sweet-gtk-theme-dark beautyline phinger-cursors
 ```
 
 6. apps

@@ -47,7 +47,7 @@ hotkey-overlay {
 }
 
 cursor {
-    xcursor-theme "Adwaita"
+    xcursor-theme "phinger-cursors-dark"
     xcursor-size 24
     hide-when-typing
     hide-after-inactive-ms 5000
