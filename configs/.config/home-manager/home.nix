@@ -38,7 +38,9 @@ in
     fd
     gh
     rsync
-    inputs.neovim-nightly.packages.${pkgs.system}.default
+    slurp
+    grim
+    inputs.neovim-nightly.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   fonts.fontconfig.enable = true; # Allow fontconfig to discover fonts in home.packages
