@@ -6,7 +6,7 @@ spawn-at-startup "fcitx5" "-d"
 spawn-sh-at-startup "sleep 1; swaybg -m stretch -i ~/Pictures/Desktop.png"
 
 output "DP-4" {
-    scale 1.75
+    scale 2
     transform "normal"
     mode "3840x2160@160"
     background-color "#303446"
