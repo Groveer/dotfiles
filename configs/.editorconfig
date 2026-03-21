@@ -23,5 +23,8 @@ trim_trailing_whitespace = false
 [*.{html,js,jsx,ts,tsx,css,yml,yaml,lua,puml}]
 indent_size = 2
 
+[*.{json,jsonc}]
+indent_size = 2
+
 [Makefile]
 indent_style = tab
