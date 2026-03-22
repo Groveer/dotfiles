@@ -193,6 +193,10 @@ if [[ -d "${MASON_BIN_PATH}" ]] && [[ "$PATH" != *"mason/bin"* ]]; then
     export PATH="${MASON_BIN_PATH}:${PATH}"
 fi
 
+if [ -e ${HOME}/.opencode/bin ] && [[ "$PATH" != *"opencode"* ]]; then
+    export PATH=$HOME/.opencode/bin:$PATH
+fi
+
 if command -v distcc >/dev/null && [[ "$PATH" != *"distcc"* ]]; then
     export PATH="/usr/lib/distcc/bin/:$PATH"
 fi

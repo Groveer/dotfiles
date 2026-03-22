@@ -3,7 +3,7 @@ spawn-at-startup "waybar"
 spawn-at-startup "dunst"
 spawn-at-startup "swayidle" "-w"
 spawn-at-startup "fcitx5" "-d"
-spawn-sh-at-startup "sleep 1; swaybg -m stretch -i ~/Pictures/Desktop.png"
+spawn-sh-at-startup 'sleep 1; swaybg -m stretch -i "$(find $HOME/Pictures/ -name "[Dd]esktop*[jJpP][nNpP][gG]" | shuf -n1)"'
 
 output "DP-4" {
     scale 2
@@ -20,24 +20,6 @@ output "HDMI-A-1" {
     mode "1920x1080@120"
     background-color "#303446"
     focus-at-startup
-}
-
-environment {
-    XDG_CURRENT_DESKTOP "niri"
-    XDG_SESSION_TYPE "wayland"
-
-    QT_QPA_PLATFORM "wayland;xcb"
-    QT_QPA_PLATFORMTHEME "qt6ct;qt5ct"
-    MOZ_ENABLE_WAYLAND "1"
-
-    QT_IM_MODULE "fcitx"
-    SDL_IM_MODULE "fcitx"
-    GLFW_IM_MODULE "fcitx"
-    XMODIFIERS "@im=fcitx"
-
-    LANGUAGE "zh_CN.UTF-8"
-    LANG "zh_CN.UTF-8"
-    LC_ALL "zh_CN.UTF-8"
 }
 
 prefer-no-csd

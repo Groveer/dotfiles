@@ -9,8 +9,9 @@ declare -A dict
 dict=(
     # desktop environment
     [niri]=niri
-    [local]=niri
-    [libinput]=niri
+    [wayfire]=wayfire
+    [local]=waybar
+    [libinput]=waybar
     [MangoHud]=mangohud
     [swaylock]=swaylock
     [dunst]=dunst
