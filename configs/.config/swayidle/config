@@ -1,3 +1,3 @@
-timeout 900 'swaylock &'
-timeout 1800 'niri msg action power-off-monitors' resume 'niri msg action power-on-monitors'
+timeout 900 'swaylock'
+timeout 1200 'wlopm --off DP-4' resume 'wlopm --on DP-4'
 # timeout 3600 'systemctl suspend' before-sleep 'swaylock &'
