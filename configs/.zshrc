@@ -15,6 +15,10 @@ if [[ "$PATH" != *"$HOME/.local/bin"* ]]; then
     export PATH=$HOME/.local/bin:$PATH
 fi
 
+if [[ -d /usr/local/lib/pkgconfig ]] && [[ "$PKG_CONFIG_PATH" != *"pkgconfig"* ]]; then
+    export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
+fi
+
 if [ -e ${HOME}/.nix-profile/etc/profile.d/nix.sh ] && [[ "$PATH" != *"nix"* ]]; then
     . ${HOME}/.nix-profile/etc/profile.d/nix.sh
 fi
