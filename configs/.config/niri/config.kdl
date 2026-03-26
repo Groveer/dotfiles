@@ -3,7 +3,7 @@ spawn-at-startup "waybar"
 spawn-at-startup "dunst"
 spawn-at-startup "swayidle" "-w"
 spawn-at-startup "fcitx5" "-d"
-spawn-sh-at-startup 'sleep 1; swaybg -m stretch -i "$(find $HOME/Pictures/ -name "[Dd]esktop*[jJpP][nNpP][gG]" | shuf -n1)"'
+// spawn-sh-at-startup "bash -c swaybg -m stretch -i "$(find $HOME/Pictures/ -name "[Dd]esktop*[jJpP][nNpP][gG]" | shuf -n1)""
 
 output "DP-4" {
     scale 2
@@ -128,7 +128,7 @@ window-rule {
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+Return { spawn "ghostty"; }
+    Mod+Return { spawn "kitty"; }
     Mod+E { spawn "nautilus"; }
     Mod+D {
         spawn "bash" "-c" "pgrep rofi && pkill rofi || rofi -show drun -config ~/.config/rofi/quickapps.rasi";

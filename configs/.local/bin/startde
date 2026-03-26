@@ -21,6 +21,9 @@ if [ $1 = "x" ]; then
 fi
 
 if [ $1 = "w" ]; then
+    export WLR_RENDERER=vulkan
+    # export WLR_DRM_DEVICES=/dev/dri/card1:/dev/dri/card2
+
     export XDG_SESSION_TYPE=wayland
     export QT_QPA_PLATFORM="wayland;xcb"
     export QT_QPA_PLATFORMTHEME="qt6ct;qt5ct"
