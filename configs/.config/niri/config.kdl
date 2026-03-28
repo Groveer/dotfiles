@@ -1,15 +1,11 @@
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
-spawn-at-startup "waybar"
-spawn-at-startup "dunst"
-spawn-at-startup "swayidle" "-w"
 spawn-at-startup "fcitx5" "-d"
-// spawn-sh-at-startup "bash -c swaybg -m stretch -i "$(find $HOME/Pictures/ -name "[Dd]esktop*[jJpP][nNpP][gG]" | shuf -n1)""
+spawn-at-startup "qs" "-c" "noctalia-shell"
 
 output "DP-4" {
     scale 2
     transform "normal"
     mode "3840x2160@160"
-    background-color "#303446"
     variable-refresh-rate
     focus-at-startup
 }
@@ -18,7 +14,6 @@ output "HDMI-A-1" {
     scale 1.25
     transform "normal"
     mode "1920x1080@120"
-    background-color "#303446"
     focus-at-startup
 }
 
@@ -38,7 +33,7 @@ cursor {
 input {
     keyboard {
         xkb {
-            layout "us"
+            layout "cn"
             options "ctrl:nocaps"
         }
 
@@ -67,7 +62,7 @@ layout {
     gaps 7
     center-focused-column "never"
     always-center-single-column
-    default-column-display "tabbed"
+    default-column-display "normal"
     tab-indicator {
         hide-when-single-tab
     }
@@ -86,26 +81,33 @@ layout {
         proportion 1.0
     }
 
-    default-column-width { proportion 0.99; }
+    default-column-width { proportion 1.0; }
 
     focus-ring {
         off
     }
     border {
-        width 1.5
+        width 1
         active-gradient from="#ea76cb" to="#dc8a78" angle=45 relative-to="workspace-view"
         inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
     shadow {
         on
     }
+    background-color "transparent"
 }
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // screenshot-path null
 
 switch-events {
-    lid-close {spawn "swaylock";}
+    lid-close {spawn "qs -c noctalia-shell ipc call lockScreen lock"; }
+}
+
+// Set the overview wallpaper on the backdrop.
+layer-rule {
+  match namespace="^noctalia-overview*"
+  place-within-backdrop true
 }
 
 window-rule {
@@ -130,9 +132,7 @@ binds {
 
     Mod+Return { spawn "kitty"; }
     Mod+E { spawn "nautilus"; }
-    Mod+D {
-        spawn "bash" "-c" "pgrep rofi && pkill rofi || rofi -show drun -config ~/.config/rofi/quickapps.rasi";
-    }
+    Mod+D { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
@@ -225,7 +225,7 @@ binds {
 
     Mod+Delete { quit; }
 
-    Mod+L { spawn "swaylock"; }
+    Mod+L { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     Mod+Shift+P { power-off-monitors; }
 
     Mod+Shift+C { center-window; }

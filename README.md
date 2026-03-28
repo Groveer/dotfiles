@@ -40,28 +40,34 @@ sudo cp -r MapleFont /usr/share/fonts
 sudo fc-cache -fv
 ```
 
-3. niri
+3. shell
 
 ```bash
-yay -S niri xwayland-satellite dunst libnotify rofi waybar swaylock-effects pipewire-pulse wf-recorder swayidle swaybg wl-clipboard
+yay -S wayfire/niri noctalia-shell libnotify pipewire-pulse wl-clipboard cliphist wlsunset power-profiles-daemon ddcutil
 ```
 
-4. dependency
+4. screen toolkit(noctalia-shell plugin)
 
 ```bash
-yay -S polkit-gnome xdg-desktop-portal-gnome parallel qt5-imageformats qt6-imageformats brightnessctl pavucontrol pamixer
+yay -S tesseract tesseract-data-eng zbar translate-shell wf-recorder gifski
 ```
 
-5. theme
+5. dependency
+
+```bash
+yay -S polkit-gnome xdg-desktop-portal-wlr parallel qt5-imageformats qt6-imageformats brightnessctl pamixer
+```
+
+6. theme
 
 ```bash
 yay -S nwg-look qt5-wayland qt6-wayland sweet-gtk-theme-dark beautyline phinger-cursors
 ```
 
-6. apps
+7. apps
 
 ```bash
-yay -S google-chrome/firefox/zen-browser fcitx5
+yay -S google-chrome/firefox/zen-browser/vivaldi fcitx5
 ```
 
 7. others

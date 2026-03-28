@@ -22,6 +22,7 @@ dict=(
     [xsettingsd]=nwg-look
     [gtk]=nwg-look
     [swayidle]=swayidle
+    [noctalia]=quickshell
     # tools
     [nvim]=nvim
     [editorconfig]=nvim

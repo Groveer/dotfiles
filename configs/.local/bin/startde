@@ -36,10 +36,10 @@ if [ $1 = "w" ]; then
     export QT_QPA_PLATFORMTHEME="qt6ct;qt5ct"
     export MOZ_ENABLE_WAYLAND=1
 
-    if command -v wayfire >/dev/null 2>&1; then
-        export XDG_CURRENT_DESKTOP=Wayfire
-        exec wayfire
-    fi
+    # if command -v wayfire >/dev/null 2>&1; then
+    #     export XDG_CURRENT_DESKTOP=Wayfire
+    #     exec wayfire
+    # fi
     if command -v niri-session >/dev/null 2>&1; then
         export XDG_CURRENT_DESKTOP=Niri
         exec niri-session

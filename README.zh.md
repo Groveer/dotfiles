@@ -40,25 +40,31 @@ sudo cp -r MapleFont /usr/share/fonts
 sudo fc-cache -fv
 ```
 
-3. niri
+3. shell
 
 ```bash
-yay -S niri xwayland-satellite dunst libnotify rofi waybar swaylock-effects pipewire-pulse wf-recorder swayidle swaybg wl-clipboard
+yay -S noctalia-shell libnotify pipewire-pulse wl-clipboard cliphist wlsunset power-profiles-daemon ddcutil
 ```
 
-4. dependency
+4. screen toolkit(noctalia-shell 插件)
 
 ```bash
-yay -S polkit-gnome xdg-desktop-portal-gnome parallel qt5-imageformats qt6-imageformats brightnessctl pavucontrol pamixer
+yay -S tesseract tesseract-data-eng zbar translate-shell wf-recorder gifski
 ```
 
-5. theme
+5. dependency
+
+```bash
+yay -S polkit-gnome xdg-desktop-portal-gnome parallel qt5-imageformats qt6-imageformats brightnessctl pamixer
+```
+
+6. theme
 
 ```bash
 yay -S nwg-look qt5-wayland qt6-wayland sweet-gtk-theme-dark beautyline phinger-cursors
 ```
 
-6. apps
+7. apps
 
 ```bash
 yay -S google-chrome/firefox/zen-browser fcitx5-chinese-addons
@@ -82,7 +88,7 @@ pip install pyamdgpuinfo
 2. 运行 `./config.sh install`, 它会初始化环境变量，并且创建软链。
 3. 运行 `chsh -s /bin/zsh`, 切换终端.
 4. 重新登录并且运行 `startde w`.
-6. 如果在运行过程中发现在家目录有冲突文件，请手动删除它，然后运行：`./config.sh install`。
+5. 如果在运行过程中发现在家目录有冲突文件，请手动删除它，然后运行：`./config.sh install`。
 
 > [!IMPORTANT]
 > `./config.sh install`会删除您的`~/.bashrc`文件，请在运行前备份好它！
