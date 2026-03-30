@@ -12,7 +12,7 @@ if command -v fcitx5 >/dev/null 2>&1; then
     export LANG=zh_CN.UTF-8
     export LC_ALL=zh_CN.UTF-8
 
-    export QT_IM_MODULES=wayland;fcitx
+    export QT_IM_MODULES=wayland
     export QT_IM_MODULE=fcitx
     export SDL_IM_MODULE=fcitx
     export XMODIFIERS="@im=fcitx"
@@ -36,10 +36,10 @@ if [ $1 = "w" ]; then
     export QT_QPA_PLATFORMTHEME="qt6ct;qt5ct"
     export MOZ_ENABLE_WAYLAND=1
 
-    if command -v wayfire >/dev/null 2>&1; then
-        export XDG_CURRENT_DESKTOP=Wayfire
-        exec wayfire
-    fi
+    # if command -v wayfire >/dev/null 2>&1; then
+    #     export XDG_CURRENT_DESKTOP=Wayfire
+    #     exec wayfire
+    # fi
     if command -v niri-session >/dev/null 2>&1; then
         export XDG_CURRENT_DESKTOP=Niri
         exec niri-session

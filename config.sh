@@ -10,8 +10,8 @@ dict=(
     # desktop environment
     [niri]=niri
     [wayfire]=wayfire
-    [local]=waybar
-    [libinput]=waybar
+    [local]=niri
+    [libinput]=niri
     [MangoHud]=mangohud
     [swaylock]=swaylock
     [dunst]=dunst
@@ -22,6 +22,7 @@ dict=(
     [xsettingsd]=nwg-look
     [gtk]=nwg-look
     [swayidle]=swayidle
+    [noctalia]=quickshell
     # tools
     [nvim]=nvim
     [editorconfig]=nvim
