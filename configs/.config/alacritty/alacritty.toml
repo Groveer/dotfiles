@@ -1,4 +1,4 @@
-import = [
+general.import = [
   # uncomment the flavour you want below:
   # "~/.config/alacritty/catppuccin-latte.toml"
   # "~/.config/alacritty/catppuccin-frappe.toml"
@@ -31,8 +31,8 @@ style = "Regular"
 hide_when_typing = true
 
 [window]
-decorations = "none"
+#decorations = "none"
 dynamic_title = true
-opacity = 0.8
+opacity = 0.5
 startup_mode = "Maximized"
 title = "Alacritty"

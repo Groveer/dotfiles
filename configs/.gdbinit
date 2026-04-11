@@ -7,3 +7,4 @@ register_qt_printers (None)
 end
 
 set print pretty on
+set debuginfod enabled on

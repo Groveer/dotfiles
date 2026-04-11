@@ -25,7 +25,6 @@ in
     python3
     nodejs
     git
-    tree-sitter
     lua
     starship
     wl-clipboard

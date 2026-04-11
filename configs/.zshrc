@@ -208,3 +208,4 @@ fi
 # export RUSTC_WRAPPER=/usr/bin/sccache
 
 #===================== User Configuration End =======================
+export OLLAMA_MODELS=$HOME/Documents/ollama/models

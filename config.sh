@@ -38,6 +38,7 @@ dict=(
     [starship]=starship
     [gdb]=gdb
     [pip]=pip
+    [uv]=uv
     [npm]=npm
     [cargo]=cargo
     [chrome]=google-chrome-stable

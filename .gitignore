@@ -4,3 +4,7 @@ configs/.config/fcitx5/conf/cached_layouts
 configs/.config/fish/fish_variables
 configs/.config/hyde/themes/
 configs/.config/home-manager/flake.lock
+configs/.config/gtk-4.0/gtk-dark.css
+configs/.config/gtk-4.0/gtk.css
+configs/.config/noctalia/colors.json
+configs/.config/noctalia/plugins/
