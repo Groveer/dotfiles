@@ -8,16 +8,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     flake-utils.url = "github:numtide/flake-utils";
-    neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
   };
 
-  outputs = { self, flake-utils, nixpkgs, home-manager, neovim-nightly, ... }@inputs:
+  outputs = { self, flake-utils, nixpkgs, home-manager, ... }@inputs:
     flake-utils.lib.eachDefaultSystemPassThrough (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
         currentUser = builtins.getEnv "USER";
       in {
-        # 'guo' is the username of the user whose home directory is being managed.
         homeConfigurations.${currentUser} = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
 

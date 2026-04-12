@@ -39,7 +39,7 @@ in
     rsync
     slurp
     grim
-    inputs.neovim-nightly.packages.${pkgs.stdenv.hostPlatform.system}.default
+    neovim
   ];
 
   fonts.fontconfig.enable = true; # Allow fontconfig to discover fonts in home.packages
@@ -60,7 +60,7 @@ in
     "..." = "cd ../..";
   };
 
-  home.stateVersion = "24.11";
+  home.stateVersion = "26.05";
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
