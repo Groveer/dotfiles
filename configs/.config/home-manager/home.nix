@@ -40,6 +40,7 @@ in
     slurp
     grim
     neovim
+    portaudio
   ];
 
   fonts.fontconfig.enable = true; # Allow fontconfig to discover fonts in home.packages
