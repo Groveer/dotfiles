@@ -158,7 +158,7 @@ ubw() {
     # set environment variables
     export BW_SESSION=$(bw unlock --raw)
     keys=(
-        CPA_API_KEY
+        AI_API_KEY
         TAVILY_API_KEY
     )
     for key in "${keys[@]}"; do
