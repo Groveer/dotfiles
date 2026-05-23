@@ -205,6 +205,10 @@ if command -v distcc >/dev/null && [[ "$PATH" != *"distcc"* ]]; then
     export PATH="/usr/lib/distcc/bin/:$PATH"
 fi
 
+if command -v icecc >/dev/null && [[ "$PATH" != *"icecc"* ]]; then
+    export PATH="/usr/lib/icecc/bin/:$PATH"
+fi
+
 # export RUSTC_WRAPPER=/usr/bin/sccache
 
 #===================== User Configuration End =======================
