@@ -201,6 +201,11 @@ if [ -e ${HOME}/.opencode/bin ] && [[ "$PATH" != *"opencode"* ]]; then
     export PATH=$HOME/.opencode/bin:$PATH
 fi
 
+if [ -e ${HOME}/.bun/bin ] && [[ "$PATH" != *".bun"* ]]; then
+    export PATH=$HOME/.bun/bin:$PATH
+    export PATH=$HOME/.cache/.bun/bin:$PATH
+fi
+
 if command -v distcc >/dev/null && [[ "$PATH" != *"distcc"* ]]; then
     export PATH="/usr/lib/distcc/bin/:$PATH"
 fi
@@ -208,6 +213,12 @@ fi
 if command -v icecc >/dev/null && [[ "$PATH" != *"icecc"* ]]; then
     export PATH="/usr/lib/icecc/bin/:$PATH"
 fi
+
+if command -v rustup >/dev/null; then
+    export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+    export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
+fi
+
 
 # export RUSTC_WRAPPER=/usr/bin/sccache
 
