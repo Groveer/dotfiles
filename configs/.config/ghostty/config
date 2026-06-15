@@ -10,6 +10,9 @@ font-feature                   = ss13
 font-size                      = 14
 window-inherit-font-size       = true
 
+window-width                   = 150
+window-height                  = 40
+
 # Look and Feel
 adjust-cursor-thickness        = 3
 adjust-underline-position      = 3
@@ -20,7 +23,7 @@ link-url                       = true
 mouse-hide-while-typing        = true
 theme                          = TokyoNight
 window-vsync                   = true
-background-opacity             = 0.8
+background-opacity             = 1.0
 background-blur                = true
 
 # Other
