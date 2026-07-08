@@ -22,7 +22,6 @@ in
     htop
     ripgrep
     nix-index
-    python3
     nodejs
     git
     lua
@@ -32,7 +31,6 @@ in
     eza
     jq
     bitwarden-cli
-    uv
     bear
     fd
     gh
