@@ -1,0 +1,12 @@
+{
+  "hindsight": {
+    "baseUrl": "https://hindsight.groveer.com"
+  },
+  "banks": {
+    "project": {
+      "enabled": true,
+      "derive": "manual",
+      "bankId": "pi-coding"
+    }
+  }
+}

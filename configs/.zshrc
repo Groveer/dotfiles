@@ -160,6 +160,9 @@ ubw() {
     keys=(
         AI_API_KEY
         TAVILY_API_KEY
+        EXA_API_KEY
+        TINYFISH_API_KEY
+        FIRECRAWL_API_KEY
     )
     for key in "${keys[@]}"; do
         value=$(bw get notes $key --session $BW_SESSION)

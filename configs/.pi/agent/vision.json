@@ -1,0 +1,23 @@
+{
+  "provider": "groveer",
+  "model": "agnes-2.5-flash",
+  "maxDimension": 1568,
+  "jpegQuality": 85,
+  "defaultReasoningEffort": "off",
+  "enabled": true,
+  "cacheEnabled": true,
+  "cachePersist": false,
+  "cacheMaxEntries": 256,
+  "retryAttempts": 2,
+  "retryBackoffMs": 500,
+  "markerStyle": "code",
+  "textOnlyPasteMode": "hint",
+  "autoDelegatePrompt": "Describe this image concisely, focusing on visible content, text, diagrams, and layout.",
+  "autoDelegateTimeoutMs": 30000,
+  "composePreview": true,
+  "previewMaxWidthCells": 80,
+  "batchConcurrency": 5,
+  "auditLog": true,
+  "localOnly": false,
+  "autoDetectVisionModel": true
+}

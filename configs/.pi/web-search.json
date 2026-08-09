@@ -1,0 +1,14 @@
+{
+  "autoOpenBrowser": false,
+  "tavilyApiKey": "$TAVILY_API_KEY",
+  "tinyfishApiKey": "$TINYFISH_API_KEY",
+  "firecrawlApiKey": "$FIRECRAWL_API_KEY",
+  "exaApiKey": "$EXA_API_KEY",
+  "ssrf": {
+    "allowRanges": [
+      "198.18.0.0/15",
+      "198.19.0.0/15"
+    ],
+    "trustEnvProxy": false
+  }
+}

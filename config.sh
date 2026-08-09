@@ -38,6 +38,7 @@ dict=(
     [starship]=starship
     [gdb]=gdb
     [pip]=pip
+    [pi]=pi
     [uv]=uv
     [npm]=npm
     [cargo]=rustup
