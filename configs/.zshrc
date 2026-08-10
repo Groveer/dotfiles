@@ -82,9 +82,9 @@ if [[ -d ${HOME}/.venv ]] && [[ "$PATH" != *"venv"* ]]; then
 fi
 
 if test -d /usr/local/texlive; then
-    export MANPATH="/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH"
-    export INFOPATH="/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH"
-    export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
+    export MANPATH="/usr/local/texlive/2026/texmf-dist/doc/man:$MANPATH"
+    export INFOPATH="/usr/local/texlive/2026/texmf-dist/doc/info:$INFOPATH"
+    export PATH="/usr/local/texlive/2026/bin/x86_64-linux:$PATH"
 fi
 test -f "/usr/share/plantuml/plantuml.jar" && export PLANTUML_JAR="/usr/share/plantuml/plantuml.jar"
 test -f "/usr/share/java/plantuml/plantuml.jar" && export PLANTUML_JAR="/usr/share/java/plantuml/plantuml.jar"
