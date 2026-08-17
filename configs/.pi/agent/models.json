@@ -2,27 +2,42 @@
   "providers": {
     "groveer": {
       "baseUrl": "https://api.groveer.com/v1",
-      "api": "openai-responses",
+      "api": "openai-completions",
       "apiKey": "$AI_API_KEY",
       "models": [
         {
           "id": "agnes-2.5-flash",
           "name": "Agnes 2.5 Flash",
-          "input": ["text", "image"],
+          "input": [
+            "text",
+            "image"
+          ],
           "contextWindow": 512000,
           "maxTokens": 65536
         },
         {
           "id": "deepseek-v4-flash",
           "name": "Deepseek V4 Flash",
-          "input": ["text"],
+          "input": [
+            "text"
+          ],
           "contextWindow": 1000000,
-          "maxTokens": 65535
+          "maxTokens": 65535,
+          "thinkingLevelMap": {
+            "off": null,
+            "low": "high",
+            "medium": "high",
+            "high": "high",
+            "xhigh": "max",
+            "max": "max"
+          }
         },
         {
           "id": "glm-5.2",
           "name": "GLM 5.2",
-          "input": ["text"],
+          "input": [
+            "text"
+          ],
           "contextWindow": 1000000,
           "maxTokens": 131072
         }

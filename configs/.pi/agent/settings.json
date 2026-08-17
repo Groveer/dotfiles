@@ -1,8 +1,14 @@
 {
-  "lastChangelogVersion": "0.84.1",
+  "lastChangelogVersion": "0.84.2",
   "theme": "tokyo-night",
   "defaultProvider": "groveer",
   "defaultModel": "deepseek-v4-flash",
+  "defaultThinkingLevel": "high",
+  "defaultTools": [
+    "read",
+    "edit",
+    "write"
+  ],
   "packages": [
     "npm:pi-mcp-adapter",
     "npm:@luxusai/pi-hindsight",
@@ -10,16 +16,17 @@
     "npm:pi-web-access",
     "npm:context-mode",
     "npm:pi-hashline-edit-pro",
-    "npm:@narumitw/pi-plan-mode",
     "npm:@spences10/pi-themes",
     "npm:@dietrichgebert/ponytail",
     "npm:@getpipher/vision",
     "npm:pi-ask-user",
     "npm:@narumitw/pi-goal",
     "npm:pi-markdown-preview",
-    "npm:pi-open-tui",
     "npm:@ff-labs/pi-fff",
-    "npm:pi-input-history"
+    "npm:pi-input-history",
+    "npm:pi-subagents",
+    "npm:pi-shift-router"
   ],
-  "tuiMode": "fullscreen"
+  "tuiMode": "fullscreen",
+  "extensions": []
 }

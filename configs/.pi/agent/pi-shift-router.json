@@ -1,0 +1,53 @@
+{
+  "enabled": true,
+  "tiers": {
+    "fast": {
+      "label": "Fast",
+      "models": [
+        {
+          "provider": "groveer",
+          "model": "deepseek-v4-flash",
+          "priority": 1
+        }
+      ],
+      "description": "Daily coding, debugging, following patterns — execution mode"
+    },
+    "smart": {
+      "label": "Smart",
+      "models": [
+        {
+          "provider": "groveer",
+          "model": "glm-5.2",
+          "priority": 1
+        }
+      ],
+      "description": "Architecture, planning, code review, trade-off analysis — judgment mode"
+    }
+  },
+  "routing": {
+    "mode": "auto",
+    "judgeTimeout": 5000,
+    "window": {
+      "size": 5,
+      "threshold": 0.6,
+      "minConfidence": 0.5
+    },
+    "cacheAware": {
+      "enabled": true,
+      "sameFamilyThreshold": 0.9,
+      "idleBoundaryMs": 300000
+    }
+  },
+  "ux": {
+    "quietMode": false,
+    "statusBar": true,
+    "inlineToast": true,
+    "routerLogVerbose": false
+  },
+  "orchestration": {
+    "mode": "auto",
+    "maxRounds": 3,
+    "escalationThreshold": 2,
+    "requireSmartModel": true
+  }
+}
