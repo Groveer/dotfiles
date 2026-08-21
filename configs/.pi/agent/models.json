@@ -16,6 +16,33 @@
           "maxTokens": 65536
         },
         {
+          "id": "sensenova-6.8-flash-lite",
+          "name": "Sensenova 6.8 Flash Lite",
+          "input": [
+            "text",
+            "image"
+          ],
+          "contextWindow": 256000,
+          "maxTokens": 65536
+        },
+        {
+          "id": "nvidia/nemotron-3-ultra-550b-a55b",
+          "name": "Nemotron 3 Ultra 550B A55B",
+          "input": [
+            "text"
+          ],
+          "contextWindow": 1000000,
+          "maxTokens": 65535,
+          "thinkingLevelMap": {
+            "off": null,
+            "low": "high",
+            "medium": "high",
+            "high": "high",
+            "xhigh": "max",
+            "max": "max"
+          }
+        },
+        {
           "id": "deepseek-v4-flash",
           "name": "Deepseek V4 Flash",
           "input": [
@@ -39,7 +66,7 @@
             "text"
           ],
           "contextWindow": 1000000,
-          "maxTokens": 131072
+          "maxTokens": 128000
         }
       ]
     }

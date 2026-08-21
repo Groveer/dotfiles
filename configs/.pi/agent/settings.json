@@ -24,8 +24,7 @@
     "npm:pi-markdown-preview",
     "npm:@ff-labs/pi-fff",
     "npm:pi-input-history",
-    "npm:pi-subagents",
-    "npm:pi-shift-router"
+    "npm:@narumitw/pi-worktree"
   ],
   "tuiMode": "fullscreen",
   "extensions": []
