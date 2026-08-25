@@ -227,8 +227,10 @@ fi
 
 #===================== User Configuration End =======================
 
-export ZELLIJ_AUTO_ATTACH=true
-export ZELLIJ_AUTO_EXIT=true
-eval "$(zellij setup --generate-auto-start zsh)"
+export FFF_ENABLE_HOME_SCAN=0
+
+# export ZELLIJ_AUTO_ATTACH=true
+# export ZELLIJ_AUTO_EXIT=true
+# eval "$(zellij setup --generate-auto-start zsh)"
 
 export OLLAMA_MODELS=$HOME/Documents/ollama/models
