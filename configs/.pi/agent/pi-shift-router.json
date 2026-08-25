@@ -19,6 +19,21 @@
           "provider": "groveer",
           "model": "glm-5.2",
           "priority": 1
+        },
+        {
+          "provider": "groveer",
+          "model": "kimi-k3",
+          "priority": 2
+        },
+        {
+          "provider": "groveer",
+          "model": "gpt-5.6-terra",
+          "priority": 3
+        },
+        {
+          "provider": "groveer",
+          "model": "qwen3.8-max",
+          "priority": 4
         }
       ],
       "description": "Architecture, planning, code review, trade-off analysis — judgment mode"

@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.84.2",
+  "lastChangelogVersion": "0.84.3",
   "theme": "tokyo-night",
   "defaultProvider": "groveer",
   "defaultModel": "deepseek-v4-flash",
@@ -21,7 +21,6 @@
     "npm:@getpipher/vision",
     "npm:pi-ask-user",
     "npm:@narumitw/pi-goal",
-    "npm:pi-markdown-preview",
     "npm:@ff-labs/pi-fff",
     "npm:pi-input-history",
     "npm:@narumitw/pi-worktree"

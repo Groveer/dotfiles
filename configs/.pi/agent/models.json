@@ -2,7 +2,7 @@
   "providers": {
     "groveer": {
       "baseUrl": "https://api.groveer.com/v1",
-      "api": "openai-completions",
+      "api": "openai-responses",
       "apiKey": "$AI_API_KEY",
       "models": [
         {
@@ -62,6 +62,33 @@
         {
           "id": "glm-5.2",
           "name": "GLM 5.2",
+          "input": [
+            "text"
+          ],
+          "contextWindow": 1000000,
+          "maxTokens": 128000
+        },
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "input": [
+            "text"
+          ],
+          "contextWindow": 1000000,
+          "maxTokens": 128000
+        },
+        {
+          "id": "gpt-5.6-terra",
+          "name": "GPT 5.6 Terra",
+          "input": [
+            "text"
+          ],
+          "contextWindow": 1000000,
+          "maxTokens": 128000
+        },
+        {
+          "id": "qwen3.8-max",
+          "name": "Qwen 3.8 Max",
           "input": [
             "text"
           ],
