@@ -34,6 +34,7 @@ dict=(
     [fastfetch]=fastfetch
     ["/.zsh"]=zsh
     ["/.ssh"]=ssh
+    ["/.git"]=git
     [fish]=fish
     [starship]=starship
     [gdb]=gdb
