@@ -2,7 +2,7 @@
   "providers": {
     "groveer": {
       "baseUrl": "https://api.groveer.com/v1",
-      "api": "openai-responses",
+      "api": "openai-completions",
       "apiKey": "$AI_API_KEY",
       "models": [
         {
@@ -69,8 +69,8 @@
           "maxTokens": 128000
         },
         {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
+          "id": "glm-5.3-flash",
+          "name": "GLM 5.3 Flash",
           "input": [
             "text"
           ],
@@ -87,8 +87,8 @@
           "maxTokens": 128000
         },
         {
-          "id": "qwen3.8-max",
-          "name": "Qwen 3.8 Max",
+          "id": "qwen3.8-flash",
+          "name": "Qwen 3.8 Flash",
           "input": [
             "text"
           ],

@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.84.3",
+  "lastChangelogVersion": "0.84.4",
   "theme": "tokyo-night",
   "defaultProvider": "groveer",
   "defaultModel": "deepseek-v4-flash",
@@ -12,18 +12,14 @@
   "packages": [
     "npm:pi-mcp-adapter",
     "npm:@luxusai/pi-hindsight",
-    "npm:@narumitw/pi-lsp",
     "npm:pi-web-access",
     "npm:context-mode",
-    "npm:pi-hashline-edit-pro",
     "npm:@spences10/pi-themes",
     "npm:@dietrichgebert/ponytail",
     "npm:@getpipher/vision",
-    "npm:pi-ask-user",
     "npm:@narumitw/pi-goal",
     "npm:@ff-labs/pi-fff",
-    "npm:pi-input-history",
-    "npm:@narumitw/pi-worktree"
+    "npm:pi-input-history"
   ],
   "tuiMode": "fullscreen",
   "extensions": []
