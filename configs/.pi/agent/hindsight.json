@@ -2,11 +2,21 @@
   "hindsight": {
     "baseUrl": "https://hindsight.groveer.com"
   },
+  "agentUse": "coding",
+  "scope": {
+    "mode": "domain-tagged",
+    "projectIdStrategy": "remote",
+    "includeSharedObservations": false
+  },
   "banks": {
     "project": {
       "enabled": true,
-      "derive": "manual",
-      "bankId": "pi-coding"
+      "bankId": "pi-coding",
+      "derive": "manual"
+    },
+    "user": {
+      "enabled": true,
+      "bankId": "pi-user"
     }
   }
 }
