@@ -150,7 +150,7 @@ start_ssh_agent() {
         fi
     fi
     eval "$(ssh-agent -s)"
-    systemctl --user set-environment "SSH_AGENT_PID=$SSH_AGENT_PID" "SSH_AUTH_SOCK=$SSH_AUTH_SOCK"
+    systemctl --user set-environment "SSH_AGENT_PID=$SSH_AGENT_PID" "SSH_AUTH_SOCK=$SSH_AUTH_SOCK" "PATH=$PATH"
 }
 
 # unlock bitwarden and export session token
