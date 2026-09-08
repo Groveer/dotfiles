@@ -23,6 +23,7 @@ dict=(
     [gtk]=nwg-look
     [swayidle]=swayidle
     [noctalia]=quickshell
+    ["/.profile"]=bash
     # tools
     [nvim]=nvim
     [editorconfig]=nvim

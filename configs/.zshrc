@@ -11,23 +11,8 @@ setopt SHARE_HISTORY             # 共享历史记录，多个终端会话同步
 setopt HIST_REDUCE_BLANKS        # 去除历史记录中多余的空格
 setopt HIST_EXPIRE_DUPS_FIRST    # 当历史记录超出限制时，优先删除重复条目
 
-if [[ "$PATH" != *"$HOME/.local/bin"* ]]; then
-    export PATH=$HOME/.local/bin:$PATH
-fi
-
 if [[ -d /usr/local/lib/pkgconfig ]] && [[ "$PKG_CONFIG_PATH" != *"pkgconfig"* ]]; then
     export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
-fi
-
-if [ -e ${HOME}/.nix-profile/etc/profile.d/nix.sh ] && [[ "$PATH" != *"nix"* ]]; then
-    . ${HOME}/.nix-profile/etc/profile.d/nix.sh
-fi
-
-if [ -e ${HOME}/.local/lib/node_modules/bin ] && [[ "$PATH" != *"node_modules"* ]]; then
-    export PATH=${HOME}/.local/lib/node_modules/bin:$PATH
-fi
-if test -d "/opt/nvim-linux64/bin" && [[ "$PATH" != *"nvim"* ]]; then
-    export PATH="$PATH:/opt/nvim-linux64/bin"
 fi
 
 alias mkdir="mkdir -pv"
@@ -51,10 +36,6 @@ date-changelog() {
     env LC_ALL=C date +'%a, %d %b %Y %T %z'
 }
 
-if [[ -d ${HOME}/.cargo/bin ]] && [[ "$PATH" != *"cargo/bin"* ]]; then
-    export PATH="$HOME/.cargo/bin:$PATH"
-fi
-
 if command -v eza >/dev/null; then
     alias ls="eza --icons=auto"
     alias l="ls -al"
@@ -71,12 +52,7 @@ fi
 if command -v starship >/dev/null; then
     eval "$(starship init zsh)"
 fi
-if command -v fnm >/dev/null && [[ "$PATH" != *"fnm"* ]]; then
-    eval "$(fnm env --use-on-cd)"
-fi
-if [[ -d /usr/lib/qt6/bin ]] && [[ "$PATH" != *"qt6/bin"* ]]; then
-    export PATH="/usr/lib/qt6/bin/:$PATH"
-fi
+
 if [[ -d ${HOME}/.venv ]] && [[ "$PATH" != *"venv"* ]]; then
     source ${HOME}/.venv/bin/activate
 fi
@@ -84,7 +60,6 @@ fi
 if test -d /usr/local/texlive; then
     export MANPATH="/usr/local/texlive/2026/texmf-dist/doc/man:$MANPATH"
     export INFOPATH="/usr/local/texlive/2026/texmf-dist/doc/info:$INFOPATH"
-    export PATH="/usr/local/texlive/2026/bin/x86_64-linux:$PATH"
 fi
 test -f "/usr/share/plantuml/plantuml.jar" && export PLANTUML_JAR="/usr/share/plantuml/plantuml.jar"
 test -f "/usr/share/java/plantuml/plantuml.jar" && export PLANTUML_JAR="/usr/share/java/plantuml/plantuml.jar"
@@ -193,32 +168,17 @@ import_env() {
 }
 
 import_env
+
+# Shared PATH/env: 单一来源 ~/.profile（zsh 默认不读 .profile，这里显式 source）
+# _PROFILE_LOADED 防止被 .zshenv / .zprofile / .zshrc 多次 source 时 PATH 重复
+[[ -z "${_PROFILE_LOADED:-}" ]] && [ -f "$HOME/.profile" ] && . "$HOME/.profile"
+
 #===================== User Configuration Start =====================
 
-export MASON_BIN_PATH="${HOME}/.local/share/nvim/mason/bin"
-if [[ -d "${MASON_BIN_PATH}" ]] && [[ "$PATH" != *"mason/bin"* ]]; then
-    export PATH="${MASON_BIN_PATH}:${PATH}"
-fi
+# mason / opencode / bun PATH 见 ~/.profile
 
-if [ -e ${HOME}/.opencode/bin ] && [[ "$PATH" != *"opencode"* ]]; then
-    export PATH=$HOME/.opencode/bin:$PATH
-fi
-
-if [ -e ${HOME}/.bun/bin ] && [[ "$PATH" != *".bun"* ]]; then
-    export PATH=$HOME/.bun/bin:$PATH
-    export PATH=$HOME/.cache/.bun/bin:$PATH
-fi
-
-if command -v distcc >/dev/null && [[ "$PATH" != *"distcc"* ]]; then
-    export PATH="/usr/lib/distcc/bin:$PATH"
-fi
-
-if command -v icecc >/dev/null && [[ "$PATH" != *"icecc"* ]]; then
-    export PATH="/usr/lib/icecc/bin:$PATH"
-fi
-
-if command -v sccache >/dev/null && [[ "$PATH" != *"sccache"* ]]; then
-    export PATH="/usr/lib/sccache/bin:$PATH"
+# distcc / icecc / sccache PATH 见 ~/.profile
+if command -v sccache >/dev/null; then
     export RUSTC_WRAPPER=/usr/bin/sccache
 fi
 
