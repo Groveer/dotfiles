@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.84.4",
+  "lastChangelogVersion": "0.85.1",
   "theme": "tokyo-night",
   "defaultProvider": "groveer",
   "defaultModel": "deepseek-v4-flash",
@@ -7,7 +7,8 @@
   "defaultTools": [
     "read",
     "edit",
-    "write"
+    "write",
+    "ls"
   ],
   "packages": [
     "npm:pi-mcp-adapter",
@@ -22,5 +23,6 @@
     "npm:pi-input-history"
   ],
   "tuiMode": "fullscreen",
-  "extensions": []
+  "extensions": [],
+  "hideThinkingBlock": true
 }

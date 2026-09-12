@@ -16,24 +16,24 @@
           "maxTokens": 128000
         },
         {
-          "id": "agnes-2.5-flash",
-          "name": "Agnes 2.5 Flash",
+          "id": "agnes-flash",
+          "name": "Agnes Flash",
           "input": [
             "text",
             "image"
           ],
           "contextWindow": 512000,
-          "maxTokens": 65536
+          "maxTokens": 65535
         },
         {
-          "id": "sensenova-6.8-flash-lite",
-          "name": "Sensenova 6.8 Flash Lite",
+          "id": "sensenova-flash",
+          "name": "SenseNova Flash",
           "input": [
             "text",
             "image"
           ],
           "contextWindow": 256000,
-          "maxTokens": 65536
+          "maxTokens": 65535
         },
         {
           "id": "nvidia/nemotron-3-ultra-550b-a55b",
@@ -79,6 +79,16 @@
           "maxTokens": 128000
         },
         {
+          "id": "mimo-v2.5-pro",
+          "name": "Mimo V2.5 Pro",
+          "input": [
+            "text",
+            "image"
+          ],
+          "contextWindow": 1000000,
+          "maxTokens": 128000
+        },
+        {
           "id": "glm-5.3-flash",
           "name": "GLM 5.3 Flash",
           "input": [
@@ -91,6 +101,16 @@
         {
           "id": "gpt-5.6-terra",
           "name": "GPT 5.6 Terra",
+          "input": [
+            "text",
+            "image"
+          ],
+          "contextWindow": 1000000,
+          "maxTokens": 128000
+        },
+        {
+          "id": "gpt-5.6-sol",
+          "name": "GPT 5.6 Sol",
           "input": [
             "text",
             "image"
