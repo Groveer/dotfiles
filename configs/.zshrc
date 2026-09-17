@@ -130,34 +130,46 @@ start_ssh_agent() {
 
 # unlock bitwarden and export session token
 ubw() {
-    # set environment variables
-    export BW_SESSION=$(bw unlock --raw)
-    keys=(
-        AI_API_KEY
-        TAVILY_API_KEY
-        EXA_API_KEY
-        TINYFISH_API_KEY
-        FIRECRAWL_API_KEY
-    )
-    for key in "${keys[@]}"; do
-        value=$(bw get notes $key --session $BW_SESSION)
-        if command -v systemctl >/dev/null; then
-            systemctl --user set-environment "$key=$value"
-        else
-            export "$key=$value"
-        fi
-        echo "$key=$value"
-    done
-    # get ssh key
-    keys=(
-        ssh_git
-        ssh_home
-    )
-    start_ssh_agent
-    for key in "${keys[@]}"; do
-        bw get item $key --session $BW_SESSION | jq -r .sshKey.privateKey | ssh-add -
-    done
-    import_env
+  export BW_SESSION=$(bw unlock --raw)
+
+  # 精确按名称取唯一 ID
+  get_id() {
+    local name="$1"
+    bw list items --search "$name" --session "$BW_SESSION" \
+      | jq -r --arg n "$name" '[.[] | select(.name==$n)] | if length==1 then .[0].id else empty end'
+  }
+
+  # 普通 key
+  for key in AI_API_KEY TAVILY_API_KEY EXA_API_KEY TINYFISH_API_KEY FIRECRAWL_API_KEY; do
+    id=$(get_id "$key")
+    if [[ -z "$id" ]]; then
+      echo "跳过：无法唯一定位 $key" >&2
+      continue
+    fi
+    value=$(bw get notes "$id" --session "$BW_SESSION")
+
+    if command -v systemctl >/dev/null; then
+      systemctl --user set-environment "$key=$value"
+    else
+      export "$key=$value"
+    fi
+    echo "$key=$value"
+  done
+
+  # SSH key
+  start_ssh_agent
+  for key in ssh_git ssh_home; do
+    id=$(get_id "$key")
+    if [[ -z "$id" ]]; then
+      echo "跳过：无法唯一定位 $key" >&2
+      continue
+    fi
+    bw get item "$id" --session "$BW_SESSION" \
+      | jq -r '.sshKey.privateKey' \
+      | ssh-add -
+  done
+
+  import_env
 }
 
 import_env() {
