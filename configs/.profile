@@ -14,8 +14,13 @@ if [ -d "$HOME/bin" ] ; then
 fi
 # ~/.local/bin is handled in the .zshrc-synced PATH section below
 
-if [ -e /home/ut000683@uos/.nix-profile/etc/profile.d/nix.sh ]; then . /home/ut000683@uos/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-. "$HOME/.cargo/env"
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
+    . $HOME/.nix-profile/etc/profile.d/nix.sh;
+fi # added by Nix installer
+
+if command -v cargo >/dev/null 2>&1; then
+    . $HOME/.cargo/env
+fi
 
 # =========================================================================
 # PATH synced 1:1 from ~/.zshrc (dotfiles/configs/.zshrc), POSIX-sh syntax.

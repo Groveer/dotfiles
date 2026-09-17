@@ -178,9 +178,7 @@ import_env
 # mason / opencode / bun PATH 见 ~/.profile
 
 # distcc / icecc / sccache PATH 见 ~/.profile
-if command -v sccache >/dev/null; then
-    export RUSTC_WRAPPER=/usr/bin/sccache
-fi
+export RUSTC_WRAPPER="$(command -v sccache)"
 
 if command -v rustup >/dev/null; then
     export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
