@@ -2,19 +2,9 @@
   "providers": {
     "groveer": {
       "baseUrl": "https://api.groveer.com/v1",
-      "api": "openai-completions",
+      "api": "openai-responses",
       "apiKey": "$AI_API_KEY",
       "models": [
-        {
-          "id": "claude-opus-5",
-          "name": "Claude Opus 5",
-          "input": [
-            "text",
-            "image"
-          ],
-          "contextWindow": 1000000,
-          "maxTokens": 128000
-        },
         {
           "id": "agnes-flash",
           "name": "Agnes Flash",
@@ -36,23 +26,6 @@
           "maxTokens": 65535
         },
         {
-          "id": "nvidia/nemotron-3-ultra-550b-a55b",
-          "name": "Nemotron 3 Ultra 550B A55B",
-          "input": [
-            "text"
-          ],
-          "contextWindow": 1000000,
-          "maxTokens": 65535,
-          "thinkingLevelMap": {
-            "off": null,
-            "low": "high",
-            "medium": "high",
-            "high": "high",
-            "xhigh": "max",
-            "max": "max"
-          }
-        },
-        {
           "id": "deepseek-v4-flash",
           "name": "Deepseek V4 Flash",
           "input": [
@@ -70,47 +43,8 @@
           }
         },
         {
-          "id": "glm-5.2",
-          "name": "GLM 5.2",
-          "input": [
-            "text"
-          ],
-          "contextWindow": 1000000,
-          "maxTokens": 128000
-        },
-        {
-          "id": "mimo-v2.5-pro",
-          "name": "Mimo V2.5 Pro",
-          "input": [
-            "text",
-            "image"
-          ],
-          "contextWindow": 1000000,
-          "maxTokens": 128000
-        },
-        {
           "id": "glm-5.3-flash",
           "name": "GLM 5.3 Flash",
-          "input": [
-            "text",
-            "image"
-          ],
-          "contextWindow": 1000000,
-          "maxTokens": 128000
-        },
-        {
-          "id": "gpt-5.6-terra",
-          "name": "GPT 5.6 Terra",
-          "input": [
-            "text",
-            "image"
-          ],
-          "contextWindow": 1000000,
-          "maxTokens": 128000
-        },
-        {
-          "id": "gpt-5.6-sol",
-          "name": "GPT 5.6 Sol",
           "input": [
             "text",
             "image"

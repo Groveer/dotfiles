@@ -1,0 +1,238 @@
+{
+  "version": 1,
+  "defaults": {
+    "lazy": true
+  },
+  "auto": true,
+  "autoLoadLimit": 1,
+  "afterStartBatchSize": 1,
+  "afterStartDelayMs": 0,
+  "afterStartInitialDelayMs": 750,
+  "afterStartPauseDuringTurn": true,
+  "afterStartAdaptiveYield": true,
+  "afterStartPrefetch": true,
+  "specs": [
+    {
+      "name": "tui",
+      "source": "npm:pi-open-tui",
+      "lazy": "after-start",
+      "priority": 10,
+      "description": "TUI / terminal user interface"
+    },
+    {
+      "name": "history",
+      "source": "npm:pi-input-history",
+      "lazy": "after-start",
+      "priority": 30,
+      "description": "Input history and recall"
+    },
+    {
+      "name": "todo",
+      "source": "npm:@juicesharp/rpiv-todo",
+      "lazy": "true",
+      "cmd": [
+        "todo"
+      ],
+      "tools": [
+        "todo"
+      ],
+      "keywords": [
+        "todo",
+        "task",
+        "task management"
+      ]
+    },
+    {
+      "name": "ask-user",
+      "source": "npm:@juicesharp/rpiv-ask-user-question",
+      "lazy": "after-start",
+      "priority": 20,
+      "tools": [
+        "ask_user_question"
+      ]
+    },
+    {
+      "name": "theme",
+      "source": "npm:@spences10/pi-themes",
+      "lazy": true,
+      "description": "Themes"
+    },
+    {
+      "name": "web",
+      "source": "npm:pi-web-access",
+      "lazy": true,
+      "cmd": [
+        "web"
+      ],
+      "tools": [
+        "web_search",
+        "fetch_content",
+        "get_search_content"
+      ],
+      "keywords": [
+        "web search",
+        "search the web",
+        "fetch url",
+        "youtube"
+      ],
+      "description": "Web search / fetch / video"
+    },
+    {
+      "name": "mcp",
+      "source": "npm:pi-mcp-adapter",
+      "lazy": true,
+      "cmd": [
+        "mcp"
+      ],
+      "keywords": [
+        "mcp",
+        "context7",
+        "codegraph"
+      ],
+      "description": "MCP server bridge"
+    },
+    {
+      "name": "context-mode",
+      "source": "npm:context-mode",
+      "lazy": true,
+      "cmd": [
+        "context-mode",
+        "ctx"
+      ],
+      "tools": [
+        "ctx_batch_execute",
+        "ctx_execute",
+        "ctx_index",
+        "ctx_search",
+        "ctx_fetch_and_index",
+        "ctx_stats",
+        "ctx_doctor",
+        "ctx_upgrade",
+        "ctx_purge"
+      ],
+      "keywords": [
+        "context-mode",
+        "ctx_execute"
+      ],
+      "description": "Context-mode tools + skills"
+    },
+    {
+      "name": "lens",
+      "source": "npm:pi-lens",
+      "lazy": true,
+      "cmd": [
+        "lens"
+      ],
+      "tools": [
+        "lens_diagnostics",
+        "symbol_search",
+        "module_report",
+        "lsp_diagnostics"
+      ],
+      "keywords": [
+        "diagnostics",
+        "symbol search",
+        "ast-grep",
+        "lsp"
+      ],
+      "description": "pi-lens code intelligence"
+    },
+    {
+      "name": "vision",
+      "source": "npm:@getpipher/vision",
+      "lazy": true,
+      "cmd": [
+        "vision",
+        "vision-use"
+      ],
+      "tools": [
+        "describe_image"
+      ],
+      "keywords": [
+        "image",
+        "vision"
+      ],
+      "description": "Vision / image reading"
+    },
+    {
+      "name": "find",
+      "source": "npm:@ff-labs/pi-fff",
+      "lazy": true,
+      "cmd": [
+        "fff-mode",
+        "fff-health",
+        "fff-rescan"
+      ],
+      "tools": [
+        "fffind",
+        "ffgrep"
+      ],
+      "keywords": [
+        "find",
+        "grep"
+      ],
+      "description": "Find / grep / fff"
+    },
+    {
+      "name": "plannotator",
+      "source": "npm:@plannotator/pi-extension",
+      "lazy": true,
+      "cmd": [
+        "plannotator",
+        "plan"
+      ],
+      "keywords": [
+        "plannotator",
+        "plan mode"
+      ],
+      "description": "Plan mode / plannotator"
+    },
+    {
+      "name": "hindsight",
+      "source": "npm:@luxusai/pi-hindsight",
+      "lazy": "after-start",
+      "priority": 30,
+      "cmd": [
+        "hindsight"
+      ],
+      "tools": [
+        "hindsight_bank",
+        "hindsight_config",
+        "hindsight_knowledge",
+        "hindsight_mental_model",
+        "hindsight_recall",
+        "hindsight_reflect",
+        "hindsight_retain",
+        "hindsight_retain_global",
+        "hindsight_scope",
+        "hindsight_scope_migrate",
+        "hindsight_seed_git",
+        "hindsight_status"
+      ],
+      "keywords": [
+        "hindsight",
+        "memory"
+      ],
+      "description": "Hindsight memory"
+    },
+    {
+      "name": "ponytail",
+      "source": "npm:@dietrichgebert/ponytail",
+      "lazy": "after-start",
+      "priority": 30,
+      "cmd": [
+        "ponytail",
+        "ponytail-review",
+        "ponytail-audit",
+        "ponytail-gain",
+        "ponytail-debt",
+        "ponytail-help"
+      ],
+      "keywords": [
+        "ponytail",
+        "audit"
+      ],
+      "description": "Ponytail audit and review"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.85.1",
+  "lastChangelogVersion": "0.86.1",
   "theme": "tokyo-night",
   "defaultProvider": "groveer",
   "defaultModel": "deepseek-v4-flash",
@@ -11,16 +11,67 @@
     "ls"
   ],
   "packages": [
-    "npm:pi-mcp-adapter",
-    "npm:@luxusai/pi-hindsight",
-    "npm:pi-web-access",
-    "npm:context-mode",
-    "npm:@spences10/pi-themes",
-    "npm:@dietrichgebert/ponytail",
-    "npm:@getpipher/vision",
-    "npm:@narumitw/pi-goal",
-    "npm:@ff-labs/pi-fff",
-    "npm:pi-input-history"
+    {
+      "source": "npm:pi-mcp-adapter",
+      "extensions": []
+    },
+    {
+      "source": "npm:@luxusai/pi-hindsight",
+      "extensions": []
+    },
+    {
+      "source": "npm:pi-web-access",
+      "extensions": []
+    },
+    {
+      "source": "npm:context-mode",
+      "extensions": []
+    },
+    {
+      "source": "npm:@spences10/pi-themes",
+      "extensions": []
+    },
+    {
+      "source": "npm:@dietrichgebert/ponytail",
+      "extensions": []
+    },
+    {
+      "source": "npm:@getpipher/vision",
+      "extensions": []
+    },
+    {
+      "source": "npm:@ff-labs/pi-fff",
+      "extensions": []
+    },
+    {
+      "source": "npm:pi-input-history",
+      "extensions": []
+    },
+    "npm:@rahularya01/pi-lazy",
+    {
+      "source": "npm:@juicesharp/rpiv-todo",
+      "extensions": []
+    },
+    {
+      "source": "npm:@juicesharp/rpiv-ask-user-question",
+      "extensions": []
+    },
+    {
+      "source": "npm:pi-paster",
+      "extensions": []
+    },
+    {
+      "source": "npm:pi-lens",
+      "extensions": []
+    },
+    {
+      "source": "npm:@plannotator/pi-extension",
+      "extensions": []
+    },
+    {
+      "source": "npm:pi-open-tui",
+      "extensions": []
+    }
   ],
   "tuiMode": "fullscreen",
   "extensions": [],
