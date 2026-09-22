@@ -40,7 +40,8 @@
         "todo",
         "task",
         "task management"
-      ]
+      ],
+      "description": "Todo / task management"
     },
     {
       "name": "ask-user",
@@ -86,7 +87,7 @@
       ],
       "keywords": [
         "mcp",
-        "context7",
+        "library",
         "codegraph"
       ],
       "description": "MCP server bridge"
@@ -94,7 +95,8 @@
     {
       "name": "context-mode",
       "source": "npm:context-mode",
-      "lazy": true,
+      "lazy": "after-start",
+      "priority": 25,
       "cmd": [
         "context-mode",
         "ctx"
@@ -102,6 +104,7 @@
       "tools": [
         "ctx_batch_execute",
         "ctx_execute",
+        "ctx_execute_file",
         "ctx_index",
         "ctx_search",
         "ctx_fetch_and_index",
@@ -112,22 +115,40 @@
       ],
       "keywords": [
         "context-mode",
-        "ctx_execute"
+        "execute",
+        "shell",
+        "bash"
       ],
-      "description": "Context-mode tools + skills"
+      "description": "Context mode / execute shell commands"
     },
     {
       "name": "lens",
       "source": "npm:pi-lens",
       "lazy": true,
       "cmd": [
-        "lens"
+        "lens-toggle",
+        "lens-context-toggle",
+        "lens-widget-toggle",
+        "lens-health",
+        "lens-perf",
+        "lens-allow-edit",
+        "lens-tools",
+        "lens-tdi",
+        "lens-map"
       ],
       "tools": [
         "lens_diagnostics",
+        "lens_diagnostic_mark",
+        "lsp_navigation",
+        "ast_grep_search",
+        "ast_grep_replace",
+        "ast_grep_outline",
         "symbol_search",
         "module_report",
-        "lsp_diagnostics"
+        "read_symbol",
+        "read_enclosing",
+        "lens_health",
+        "lens_project_scan"
       ],
       "keywords": [
         "diagnostics",
@@ -171,21 +192,23 @@
         "find",
         "grep"
       ],
-      "description": "Find / grep / fff"
+      "description": "Find / grep"
     },
     {
       "name": "plannotator",
       "source": "npm:@plannotator/pi-extension",
       "lazy": true,
       "cmd": [
-        "plannotator",
-        "plan"
+        "plannotator-plan-mode",
+        "plannotator-review",
+        "plannotator-annotate",
+        "plannotator-last"
       ],
       "keywords": [
-        "plannotator",
+        "review",
         "plan mode"
       ],
-      "description": "Plan mode / plannotator"
+      "description": "Plan mode / review / annotate"
     },
     {
       "name": "hindsight",
