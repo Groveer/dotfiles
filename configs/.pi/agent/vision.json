@@ -1,6 +1,6 @@
 {
   "provider": "groveer",
-  "model": "agnes-flash",
+  "model": "sensenova-flash",
   "maxDimension": 1568,
   "jpegQuality": 85,
   "defaultReasoningEffort": "off",

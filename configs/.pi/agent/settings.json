@@ -1,8 +1,8 @@
 {
-  "lastChangelogVersion": "0.87.0",
+  "lastChangelogVersion": "0.87.1",
   "theme": "tokyo-night",
   "defaultProvider": "groveer",
-  "defaultModel": "deepseek-v4-flash",
+  "defaultModel": "deepseek-v4.1-flash",
   "defaultThinkingLevel": "high",
   "defaultTools": [
     "read",

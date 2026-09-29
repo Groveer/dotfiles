@@ -26,8 +26,8 @@
           "maxTokens": 65535
         },
         {
-          "id": "deepseek-v4-flash",
-          "name": "Deepseek V4 Flash",
+          "id": "deepseek-v4.1-flash",
+          "name": "Deepseek V4.1 Flash",
           "input": [
             "text"
           ],
