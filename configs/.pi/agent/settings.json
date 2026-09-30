@@ -1,30 +1,20 @@
 {
-  "lastChangelogVersion": "0.87.1",
+  "lastChangelogVersion": "0.99.1",
   "theme": "tokyo-night",
   "defaultProvider": "groveer",
   "defaultModel": "deepseek-v4.1-flash",
   "defaultThinkingLevel": "high",
   "defaultTools": [
-    "read",
-    "edit",
-    "write",
-    "ls"
+    "+codemode",
+    "+ls"
   ],
   "packages": [
-    {
-      "source": "npm:pi-mcp-adapter",
-      "extensions": []
-    },
     {
       "source": "npm:@luxusai/pi-hindsight",
       "extensions": []
     },
     {
       "source": "npm:pi-web-access",
-      "extensions": []
-    },
-    {
-      "source": "npm:context-mode",
       "extensions": []
     },
     {
@@ -70,6 +60,14 @@
     },
     {
       "source": "npm:pi-open-tui",
+      "extensions": []
+    },
+    {
+      "source": "npm:pi-file-preview",
+      "extensions": []
+    },
+    {
+      "source": "npm:pi-ssh-remote",
       "extensions": []
     }
   ],

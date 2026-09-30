@@ -29,7 +29,7 @@
     {
       "name": "todo",
       "source": "npm:@juicesharp/rpiv-todo",
-      "lazy": "true",
+      "lazy": true,
       "cmd": [
         "todo"
       ],
@@ -44,6 +44,19 @@
       "description": "Todo / task management"
     },
     {
+      "name": "remote",
+      "source": "npm:pi-ssh-remote",
+      "lazy": true,
+      "cmd": [
+        "remote"
+      ],
+      "keywords": [
+        "ssh",
+        "remote"
+      ],
+      "description": "ssh / remote"
+    },
+    {
       "name": "ask-user",
       "source": "npm:@juicesharp/rpiv-ask-user-question",
       "lazy": "after-start",
@@ -51,6 +64,12 @@
       "tools": [
         "ask_user_question"
       ]
+    },
+    {
+      "name": "file-preview",
+      "source": "npm:pi-file-preview",
+      "lazy": "after-start",
+      "priority": 20
     },
     {
       "name": "theme",
@@ -77,49 +96,6 @@
         "youtube"
       ],
       "description": "Web search / fetch / video"
-    },
-    {
-      "name": "mcp",
-      "source": "npm:pi-mcp-adapter",
-      "lazy": true,
-      "cmd": [
-        "mcp"
-      ],
-      "keywords": [
-        "mcp",
-        "library",
-        "codegraph"
-      ],
-      "description": "MCP server bridge"
-    },
-    {
-      "name": "context-mode",
-      "source": "npm:context-mode",
-      "lazy": "after-start",
-      "priority": 25,
-      "cmd": [
-        "context-mode",
-        "ctx"
-      ],
-      "tools": [
-        "ctx_batch_execute",
-        "ctx_execute",
-        "ctx_execute_file",
-        "ctx_index",
-        "ctx_search",
-        "ctx_fetch_and_index",
-        "ctx_stats",
-        "ctx_doctor",
-        "ctx_upgrade",
-        "ctx_purge"
-      ],
-      "keywords": [
-        "context-mode",
-        "execute",
-        "shell",
-        "bash"
-      ],
-      "description": "Context mode / execute shell commands"
     },
     {
       "name": "lens",
