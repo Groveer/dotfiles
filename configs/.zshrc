@@ -140,7 +140,7 @@ ubw() {
   }
 
   # 普通 key
-  for key in AI_API_KEY TAVILY_API_KEY EXA_API_KEY TINYFISH_API_KEY FIRECRAWL_API_KEY; do
+  for key in AI_API_KEY CONTEXT7_API_KEY TAVILY_API_KEY EXA_API_KEY TINYFISH_API_KEY FIRECRAWL_API_KEY; do
     id=$(get_id "$key")
     if [[ -z "$id" ]]; then
       echo "跳过：无法唯一定位 $key" >&2
