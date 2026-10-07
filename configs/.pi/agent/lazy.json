@@ -13,13 +13,6 @@
   "afterStartPrefetch": true,
   "specs": [
     {
-      "name": "tui",
-      "source": "npm:pi-open-tui",
-      "lazy": "after-start",
-      "priority": 10,
-      "description": "TUI / terminal user interface"
-    },
-    {
       "name": "history",
       "source": "npm:pi-input-history",
       "lazy": "after-start",
@@ -59,8 +52,14 @@
     {
       "name": "ask-user",
       "source": "npm:@juicesharp/rpiv-ask-user-question",
-      "lazy": "after-start",
-      "priority": 20,
+      "lazy": true,
+      "keywords": [
+        "ask user",
+        "ask me",
+        "clarify",
+        "which option",
+        "choose"
+      ],
       "tools": [
         "ask_user_question"
       ]

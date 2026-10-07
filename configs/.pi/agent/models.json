@@ -26,6 +26,15 @@
           "maxTokens": 65535
         },
         {
+          "id": "hy4-preview",
+          "name": "HY4 Preview",
+          "input": [
+            "text"
+          ],
+          "contextWindow": 1000000,
+          "maxTokens": 64000
+        },
+        {
           "id": "deepseek-v4.1-flash",
           "name": "Deepseek V4.1 Flash",
           "input": [
