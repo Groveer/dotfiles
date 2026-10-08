@@ -1,0 +1,10 @@
+[init]
+	defaultBranch = main
+[core]
+	quotepath = false
+	excludesFile = ~/.gitignore
+[format]
+	signoff = true
+[alias]
+	wta = "!f(){ d=\"$(git rev-parse --show-toplevel)/.worktrees/$1\"; if git show-ref -q --verify \"refs/heads/$1\"; then git worktree add \"$d\" \"$1\"; else git worktree add \"$d\" -b \"$1\" \"${2:-HEAD}\"; fi; }; f"
+	wtr = "!f(){ d=\"$(git rev-parse --show-toplevel)/.worktrees/$1\"; if [ \"$2\" = \"-f\" ]; then git worktree remove --force \"$d\"; else git worktree remove \"$d\"; fi && git branch -D \"$1\"; }; f"
