@@ -65,12 +65,6 @@
       ]
     },
     {
-      "name": "file-preview",
-      "source": "npm:pi-file-preview",
-      "lazy": "after-start",
-      "priority": 20
-    },
-    {
       "name": "theme",
       "source": "npm:@spences10/pi-themes",
       "lazy": true,

@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "1.0.4",
+  "lastChangelogVersion": "1.1.0",
   "theme": "tokyo-night",
   "defaultProvider": "groveer",
   "defaultModel": "deepseek-v4.1-flash",
@@ -56,10 +56,6 @@
     },
     {
       "source": "npm:@plannotator/pi-extension",
-      "extensions": []
-    },
-    {
-      "source": "npm:pi-file-preview",
       "extensions": []
     },
     {
