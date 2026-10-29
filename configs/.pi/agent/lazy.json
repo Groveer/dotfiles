@@ -147,7 +147,8 @@
     {
       "name": "find",
       "source": "npm:@ff-labs/pi-fff",
-      "lazy": true,
+      "lazy": "after-start",
+      "priority": 20,
       "cmd": [
         "fff-mode",
         "fff-health",
@@ -161,7 +162,7 @@
         "find",
         "grep"
       ],
-      "description": "Find / grep"
+      "description": "Use fffind and ffgrep for fast file search and content search"
     },
     {
       "name": "plannotator",
@@ -178,34 +179,6 @@
         "plan mode"
       ],
       "description": "Plan mode / review / annotate"
-    },
-    {
-      "name": "hindsight",
-      "source": "npm:@luxusai/pi-hindsight",
-      "lazy": "after-start",
-      "priority": 30,
-      "cmd": [
-        "hindsight"
-      ],
-      "tools": [
-        "hindsight_bank",
-        "hindsight_config",
-        "hindsight_knowledge",
-        "hindsight_mental_model",
-        "hindsight_recall",
-        "hindsight_reflect",
-        "hindsight_retain",
-        "hindsight_retain_global",
-        "hindsight_scope",
-        "hindsight_scope_migrate",
-        "hindsight_seed_git",
-        "hindsight_status"
-      ],
-      "keywords": [
-        "hindsight",
-        "memory"
-      ],
-      "description": "Hindsight memory"
     },
     {
       "name": "ponytail",

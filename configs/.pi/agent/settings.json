@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "1.1.0",
+  "lastChangelogVersion": "1.4.0",
   "theme": "tokyo-night",
   "defaultProvider": "groveer",
   "defaultModel": "deepseek-v4.1-flash",
@@ -9,10 +9,6 @@
     "+ls"
   ],
   "packages": [
-    {
-      "source": "npm:@luxusai/pi-hindsight",
-      "extensions": []
-    },
     {
       "source": "npm:pi-web-access",
       "extensions": []
@@ -44,10 +40,6 @@
     },
     {
       "source": "npm:@juicesharp/rpiv-ask-user-question",
-      "extensions": []
-    },
-    {
-      "source": "npm:pi-paster",
       "extensions": []
     },
     {
