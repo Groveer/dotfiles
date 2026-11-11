@@ -8,3 +8,4 @@
 [alias]
 	wta = "!f(){ d=\"$(git rev-parse --show-toplevel)/.worktrees/$1\"; if git show-ref -q --verify \"refs/heads/$1\"; then git worktree add \"$d\" \"$1\"; else git worktree add \"$d\" -b \"$1\" \"${2:-HEAD}\"; fi; }; f"
 	wtr = "!f(){ d=\"$(git rev-parse --show-toplevel)/.worktrees/$1\"; if [ \"$2\" = \"-f\" ]; then git worktree remove --force \"$d\"; else git worktree remove \"$d\"; fi && git branch -D \"$1\"; }; f"
+	pr = "!f(){ n=\"$1\"; r=\"${2:-upstream}\"; git fetch \"$r\" \"pull/$n/head\" || return 1; new=$(git rev-parse FETCH_HEAD); if [ -n \"$(git status --porcelain)\" ]; then echo \"错误：工作区不干净，请先 stash 或提交后再同步 PR #$n\" >&2; return 1; fi; git reset --hard \"$new\" || return 1; git config --local \"pr.$n.head\" \"$new\"; echo \"已强制同步 PR #$n 到 $(git rev-parse --short HEAD)\"; }; f"

@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "1.4.0",
+  "lastChangelogVersion": "1.5.2",
   "theme": "tokyo-night",
   "defaultProvider": "groveer",
   "defaultModel": "deepseek-v4.1-flash",
@@ -57,5 +57,8 @@
   ],
   "tuiMode": "fullscreen",
   "extensions": [],
-  "hideThinkingBlock": true
+  "hideThinkingBlock": true,
+  "extensionChangelogVersions": {
+    "{\"source\":\"npm:@rahularya01/pi-lazy\",\"scope\":\"user\"}": "0.3.1"
+  }
 }

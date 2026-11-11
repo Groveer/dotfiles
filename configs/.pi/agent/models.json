@@ -26,13 +26,24 @@
           "maxTokens": 65535
         },
         {
-          "id": "hy4-preview",
-          "name": "HY4 Preview",
+          "id": "gpt-6.1-sol",
+          "name": "GPT-6.1 Sol",
           "input": [
-            "text"
+            "text",
+            "image"
           ],
           "contextWindow": 1000000,
-          "maxTokens": 64000
+          "maxTokens": 128000
+        },
+        {
+          "id": "gpt-6-astra",
+          "name": "GPT-6 Astra",
+          "input": [
+            "text",
+            "image"
+          ],
+          "contextWindow": 1000000,
+          "maxTokens": 128000
         },
         {
           "id": "deepseek-v4.1-flash",
@@ -54,16 +65,6 @@
         {
           "id": "glm-5.3-flash",
           "name": "GLM 5.3 Flash",
-          "input": [
-            "text",
-            "image"
-          ],
-          "contextWindow": 1000000,
-          "maxTokens": 128000
-        },
-        {
-          "id": "qwen3.8-flash",
-          "name": "Qwen 3.8 Flash",
           "input": [
             "text",
             "image"
