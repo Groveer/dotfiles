@@ -1,0 +1,7 @@
+# 客户端配置文件
+[dist]
+scheduler_url = "http://10.20.33.146:10600"
+
+[dist.auth]
+type = "token"
+token = "7ZQAYPE-QQ33W6lFtmAkbfjfg6htJWMZiwy9YjhHpzY" # 必须与 scheduler.conf 中的令牌一致
