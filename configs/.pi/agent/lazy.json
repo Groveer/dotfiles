@@ -91,43 +91,6 @@
       "description": "Web search / fetch / video"
     },
     {
-      "name": "lens",
-      "source": "npm:pi-lens",
-      "lazy": true,
-      "cmd": [
-        "lens-toggle",
-        "lens-context-toggle",
-        "lens-widget-toggle",
-        "lens-health",
-        "lens-perf",
-        "lens-allow-edit",
-        "lens-tools",
-        "lens-tdi",
-        "lens-map"
-      ],
-      "tools": [
-        "lens_diagnostics",
-        "lens_diagnostic_mark",
-        "lsp_navigation",
-        "ast_grep_search",
-        "ast_grep_replace",
-        "ast_grep_outline",
-        "symbol_search",
-        "module_report",
-        "read_symbol",
-        "read_enclosing",
-        "lens_health",
-        "lens_project_scan"
-      ],
-      "keywords": [
-        "diagnostics",
-        "symbol search",
-        "ast-grep",
-        "lsp"
-      ],
-      "description": "pi-lens code intelligence"
-    },
-    {
       "name": "vision",
       "source": "npm:@getpipher/vision",
       "lazy": true,

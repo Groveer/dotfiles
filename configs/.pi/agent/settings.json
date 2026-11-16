@@ -2,7 +2,7 @@
   "lastChangelogVersion": "1.5.2",
   "theme": "tokyo-night",
   "defaultProvider": "groveer",
-  "defaultModel": "deepseek-v4.1-flash",
+  "defaultModel": "group/max",
   "defaultThinkingLevel": "high",
   "defaultTools": [
     "+codemode",
@@ -40,10 +40,6 @@
     },
     {
       "source": "npm:@juicesharp/rpiv-ask-user-question",
-      "extensions": []
-    },
-    {
-      "source": "npm:pi-lens",
       "extensions": []
     },
     {

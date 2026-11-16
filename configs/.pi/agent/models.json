@@ -6,18 +6,8 @@
       "apiKey": "$AI_API_KEY",
       "models": [
         {
-          "id": "agnes-flash",
-          "name": "Agnes Flash",
-          "input": [
-            "text",
-            "image"
-          ],
-          "contextWindow": 512000,
-          "maxTokens": 65535
-        },
-        {
-          "id": "sensenova-flash",
-          "name": "SenseNova Flash",
+          "id": "group/image",
+          "name": "Image",
           "input": [
             "text",
             "image"
@@ -26,8 +16,18 @@
           "maxTokens": 65535
         },
         {
-          "id": "gpt-6.1-sol",
-          "name": "GPT-6.1 Sol",
+          "id": "group/max",
+          "name": "Max",
+          "input": [
+            "text",
+            "image"
+          ],
+          "contextWindow": 1050000,
+          "maxTokens": 128000
+        },
+        {
+          "id": "group/pro",
+          "name": "Pro",
           "input": [
             "text",
             "image"
@@ -36,41 +36,14 @@
           "maxTokens": 128000
         },
         {
-          "id": "gpt-6-astra",
-          "name": "GPT-6 Astra",
+          "id": "group/lite",
+          "name": "Lite",
           "input": [
             "text",
             "image"
           ],
-          "contextWindow": 1000000,
-          "maxTokens": 128000
-        },
-        {
-          "id": "deepseek-v4.1-flash",
-          "name": "Deepseek V4.1 Flash",
-          "input": [
-            "text"
-          ],
-          "contextWindow": 1000000,
-          "maxTokens": 65535,
-          "thinkingLevelMap": {
-            "off": null,
-            "low": "high",
-            "medium": "high",
-            "high": "high",
-            "xhigh": "max",
-            "max": "max"
-          }
-        },
-        {
-          "id": "glm-5.3-flash",
-          "name": "GLM 5.3 Flash",
-          "input": [
-            "text",
-            "image"
-          ],
-          "contextWindow": 1000000,
-          "maxTokens": 128000
+          "contextWindow": 256000,
+          "maxTokens": 65535
         }
       ]
     }

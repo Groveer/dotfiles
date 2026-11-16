@@ -1,6 +1,6 @@
 {
   "provider": "groveer",
-  "model": "agnes-flash",
+  "model": "group/image",
   "maxDimension": 1568,
   "jpegQuality": 85,
   "defaultReasoningEffort": "off",
