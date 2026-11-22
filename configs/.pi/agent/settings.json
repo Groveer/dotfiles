@@ -33,7 +33,7 @@
       "source": "npm:pi-input-history",
       "extensions": []
     },
-    "npm:@rahularya01/pi-lazy",
+    "npm:@zhuyanqi/pi-lazy",
     {
       "source": "npm:@juicesharp/rpiv-todo",
       "extensions": []
@@ -53,8 +53,5 @@
   ],
   "tuiMode": "fullscreen",
   "extensions": [],
-  "hideThinkingBlock": true,
-  "extensionChangelogVersions": {
-    "{\"source\":\"npm:@rahularya01/pi-lazy\",\"scope\":\"user\"}": "0.3.1"
-  }
+  "hideThinkingBlock": true
 }
