@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "1.5.2",
+  "lastChangelogVersion": "1.7.0",
   "theme": "tokyo-night",
   "defaultProvider": "groveer",
   "defaultModel": "group/max",
@@ -49,9 +49,62 @@
     {
       "source": "npm:pi-ssh-remote",
       "extensions": []
+    },
+    {
+      "source": "npm:@ian-pascoe/pi-lsp",
+      "extensions": []
     }
   ],
+  "lsp": {
+    "includeHintDiagnostics": false,
+    "timeouts": {
+      "initializeMs": 60000,
+      "workspaceRequestMs": 30000
+    },
+    "servers": {
+      "clangd": {
+        "command": "clangd",
+        "args": [
+          "--background-index",
+          "--enable-config",
+          "--pch-storage=memory",
+          "--clang-tidy",
+          "--all-scopes-completion",
+          "--header-insertion=never",
+          "--limit-references=3000",
+          "--limit-results=350",
+          "--log=error"
+        ],
+        "languages": [
+          { "extensions": [".c", ".h"], "languageId": "c" },
+          { "extensions": [".cpp", ".cc", ".cxx", ".hpp", ".hh", ".hxx", ".ipp", ".inl"], "languageId": "cpp" }
+        ],
+        "rootMarkers": [".clangd", "compile_commands.json", "compile_flags.txt"],
+        "requireRootMarker": true,
+        "maxConcurrentDiagnostics": 2
+      },
+      "rust-analyzer": {
+        "command": "rust-analyzer",
+        "languages": [
+          { "extensions": [".rs"], "languageId": "rust" }
+        ],
+        "rootMarkers": ["Cargo.toml"],
+        "workspaceRootMarkers": ["Cargo.lock"],
+        "requireRootMarker": true,
+        "maxConcurrentDiagnostics": 1,
+        "settings": {
+          "rust-analyzer": {
+            "check": { "command": "clippy" },
+            "cargo": { "allFeatures": true }
+          }
+        }
+      }
+    }
+  },
   "tuiMode": "fullscreen",
   "extensions": [],
-  "hideThinkingBlock": true
+  "hideThinkingBlock": true,
+  "extensionChangelogVersions": {
+    "{\"source\":\"npm:@zhuyanqi/pi-lazy\",\"scope\":\"user\"}": "0.6.6"
+  }
 }

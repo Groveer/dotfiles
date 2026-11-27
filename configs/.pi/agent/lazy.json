@@ -144,6 +144,36 @@
       "description": "Plan mode / review / annotate"
     },
     {
+      "name": "lsp",
+      "source": "npm:@ian-pascoe/pi-lsp",
+      "lazy": true,
+      "cmd": [
+        "lsp"
+      ],
+      "tools": [
+        "lsp_status",
+        "lsp_diagnostics",
+        "lsp_hover",
+        "lsp_goto_definition",
+        "lsp_find_references",
+        "lsp_document_symbols",
+        "lsp_workspace_symbols",
+        "lsp_rename",
+        "lsp_code_actions",
+        "lsp_apply"
+      ],
+      "keywords": [
+        "lsp",
+        "clangd",
+        "rust-analyzer",
+        "diagnostics",
+        "go to definition",
+        "find references",
+        "rename symbol"
+      ],
+      "description": "LSP diagnostics / navigation (clangd, rust-analyzer)"
+    },
+    {
       "name": "ponytail",
       "source": "npm:@dietrichgebert/ponytail",
       "lazy": "after-start",
