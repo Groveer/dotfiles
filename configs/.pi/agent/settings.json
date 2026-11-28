@@ -77,26 +77,61 @@
           "--log=error"
         ],
         "languages": [
-          { "extensions": [".c", ".h"], "languageId": "c" },
-          { "extensions": [".cpp", ".cc", ".cxx", ".hpp", ".hh", ".hxx", ".ipp", ".inl"], "languageId": "cpp" }
+          {
+            "extensions": [
+              ".c",
+              ".h"
+            ],
+            "languageId": "c"
+          },
+          {
+            "extensions": [
+              ".cpp",
+              ".cc",
+              ".cxx",
+              ".hpp",
+              ".hh",
+              ".hxx",
+              ".ipp",
+              ".inl"
+            ],
+            "languageId": "cpp"
+          }
         ],
-        "rootMarkers": [".clangd", "compile_commands.json", "compile_flags.txt"],
+        "rootMarkers": [
+          ".clangd",
+          "compile_commands.json",
+          "compile_flags.txt"
+        ],
         "requireRootMarker": true,
         "maxConcurrentDiagnostics": 2
       },
       "rust-analyzer": {
         "command": "rust-analyzer",
         "languages": [
-          { "extensions": [".rs"], "languageId": "rust" }
+          {
+            "extensions": [
+              ".rs"
+            ],
+            "languageId": "rust"
+          }
         ],
-        "rootMarkers": ["Cargo.toml"],
-        "workspaceRootMarkers": ["Cargo.lock"],
+        "rootMarkers": [
+          "Cargo.toml"
+        ],
+        "workspaceRootMarkers": [
+          "Cargo.lock"
+        ],
         "requireRootMarker": true,
         "maxConcurrentDiagnostics": 1,
         "settings": {
           "rust-analyzer": {
-            "check": { "command": "clippy" },
-            "cargo": { "allFeatures": true }
+            "check": {
+              "command": "clippy"
+            },
+            "cargo": {
+              "allFeatures": true
+            }
           }
         }
       }
