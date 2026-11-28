@@ -65,12 +65,6 @@
       ]
     },
     {
-      "name": "theme",
-      "source": "npm:@spences10/pi-themes",
-      "lazy": true,
-      "description": "Themes"
-    },
-    {
       "name": "web",
       "source": "npm:pi-web-access",
       "lazy": true,
